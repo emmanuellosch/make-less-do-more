@@ -1,26 +1,24 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
 import "./App.css";
-import FooterNavigation from "./FooterNavigation";
-
-//Pages
-import ReusableMainPage from "./pages";
-import FavoritesPage from "./pages/favorites";
-import HomemadePage from "./pages/homemade";
-import ProfilPage from "./pages/profil";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Reusable from "./pages/Reusable";
+import Favorites from "./pages/Favorites";
+import Homemade from "./pages/Homemade";
+import Profil from "./pages/Profil";
+import Navigation from "./Navigation";
 
 function App() {
   return (
-    <div className="App">
-      <FooterNavigation />
-      <main>
+    <div>
+      <BrowserRouter>
+        <Navigation />
         <Switch>
-          <Route exact path="/" render={ReusableMainPage} />
-          <Route exact path="/" component={FavoritesPage} />
-          <Route exact path="/" component={HomemadePage} />
-          <Route exact path="/" component={ProfilPage} />
+          <Route path="/Reusable" component={Reusable} />
+          <Route path="/Favorites" component={Favorites} />
+          <Route path="/Homemade" component={Homemade} />
+          <Route path="/Profil" component={Profil} />
         </Switch>
-      </main>
+      </BrowserRouter>
     </div>
   );
 }
