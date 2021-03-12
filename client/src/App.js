@@ -5,7 +5,7 @@ import Reusable from "./pages/Reusable";
 import Favorites from "./pages/Favorites";
 import Homemade from "./pages/Homemade";
 import Profil from "./pages/Profil";
-import Navigation from "./Navigation";
+import Navigation from "./components/Navigation";
 
 function App() {
   return (

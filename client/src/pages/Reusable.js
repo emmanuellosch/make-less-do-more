@@ -1,33 +1,43 @@
 import React from "react";
 import styled from "styled-components";
+import { Link, Route, Switch, useRouteMatch } from "react-router-dom";
+import Kitchen from "./Kitchen";
 
 const Reusable = (props) => {
+  let { path, url } = useRouteMatch();
+  console.log(path, url);
   return (
-    <Div>
-      <div className="d-flex flex-column">
-        <div className="p-5 column text-left">
-          {" "}
-          <a href="./components/Kitchenlist">link</a>Kitchen
-        </div>
-        <div className="p-5 column text-left">Bathroom</div>
-        <div className="p-5 column text-left">Livingroom</div>
-      </div>
-      <div className="d-flex flex-column-reverse">
-        <div className="p-5 column text-left">Sleepingroom</div>
-        <div className="p-5 column text-left">Kidsroom</div>
-      </div>
-    </Div>
+    <>
+      <Div>
+        <Link to={`${url}/Kitchen`}>Kitchen</Link>
+        <Link>Bathroom</Link>
+        <Link>Livingroom</Link>
+        <Link>Sleepingroom</Link>
+        <Link>Kidsroom</Link>
+      </Div>
+      <Switch>
+        <Route path={`${path}/Kitchen`}>
+          <Kitchen />
+        </Route>
+      </Switch>
+    </>
   );
 };
 
 export default Reusable;
 
 const Div = styled.div`
-  .d-flex div {
-    padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  justify-content: space-around;
+  padding: 1rem;
+
+  text-align: center;
+  a {
     background-color: grey;
     border: 2px solid #fff;
     color: #fff;
-    text-align: center;
+    padding: 1.2rem;
   }
 `;
