@@ -3,7 +3,7 @@ import { Nav, NavItem } from "reactstrap";
 import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faRecycle,
+  faRetweet,
   faBookmark,
   faHandHoldingHeart,
   faUserCircle,
@@ -12,7 +12,7 @@ import {
 const tabs = [
   {
     route: "/Reusable",
-    icon: faRecycle,
+    icon: faRetweet,
     label: "Reusable",
   },
   {
@@ -35,35 +35,6 @@ const tabs = [
 const Navigation = (props) => {
   return (
     <div>
-      {/* Top Bar*/}
-      <nav
-        className="navbar navbar-expand-md navbar-light d-none d-lg-block sticky-top"
-        role="navigation"
-      >
-        <div className="container-fluid">
-          <a className="navbar-brand" href="/Reusable">
-            Reusable
-          </a>
-          <Nav className="ml-auto">
-            <NavItem>
-              <NavLink to="/Favorites" className="nav-link">
-                Favorites
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink to="/Homemade" className="nav-link">
-                Homemade
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink to="/Profile" className="nav-link">
-                Profile
-              </NavLink>
-            </NavItem>
-          </Nav>
-        </div>
-      </nav>
-
       {/* Bottom Tab Navigator*/}
       <nav
         className="navbar fixed-bottom navbar-light d-block d-lg-none bottom-tab-nav"

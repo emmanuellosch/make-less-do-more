@@ -5,7 +5,10 @@ const Reusable = (props) => {
   return (
     <Div>
       <div className="d-flex flex-column">
-        <div className="p-5 column text-left">Kitchen</div>
+        <div className="p-5 column text-left">
+          {" "}
+          <a href="./components/Kitchenlist">link</a>Kitchen
+        </div>
         <div className="p-5 column text-left">Bathroom</div>
         <div className="p-5 column text-left">Livingroom</div>
       </div>
