@@ -4,29 +4,14 @@ export const GlobalStyles = createGlobalStyle`
 
 
 
-/*
-.navbar {
-  border-bottom: solid 1px #ebebeb;
-}
-.bottom-tab-nav {
-  border-top: solid 1px #ebebeb;
-}
-.nav-link,
-.bottom-nav-link {
-  color: #55575b;
-}
-.bottom-nav-link.active {
-  color: #922c88;
-}
-.bottom-tab-label {
-  font-size: 12px;
-}
-*/
-
 body {
   display: flex;
-  justify-content: center;
+ 
   padding-top: 50px;
+}
+
+.app {
+  width: 100vw;
 }
 
 .frontpage {
@@ -35,7 +20,7 @@ body {
 
 .home-wrapper {
   max-width: 500px;
-  margin: 50px 0;
+  margin: 50px auto;
   padding: 40px 25px;
   background-color: whitesmoke;
   font-family: Arial;
@@ -44,10 +29,16 @@ body {
   letter-spacing: 1px;
 }
 
+
 .menu {
   display: flex;
   justify-content: center;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  
 }
+
 
 .modal-wrapper {
   position: fixed;
@@ -105,5 +96,4 @@ body {
   padding: 1rem; 
 }
 
- 
 `;
