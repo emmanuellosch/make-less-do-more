@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Homemade extends Component {
   render() {
     return (
-      <div className="homemade wrapper">
+      <div className="homemade-wrapper">
         <h2>Homemade</h2>
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem
         accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab

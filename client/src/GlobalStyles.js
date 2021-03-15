@@ -29,6 +29,41 @@ body {
   letter-spacing: 1px;
 }
 
+.favorites-wrapper {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 40px 25px;
+  background-color: whitesmoke;
+  font-family: Arial;
+  font-size: 16px;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+}
+
+
+.homemade-wrapper {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 40px 25px;
+  background-color: whitesmoke;
+  font-family: Arial;
+  font-size: 16px;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+}
+
+
+.profil-wrapper {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 40px 25px;
+  background-color: whitesmoke;
+  font-family: Arial;
+  font-size: 16px;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+}
+
 
 .menu {
   display: flex;
@@ -84,8 +119,11 @@ body {
   font-size: 20px;
   font-family: Arial;
   padding: 10px;
-  border-radius: 2px;
+  border-radius: 10px;
   margin-right: 10px;
+  box-shadow: 2px 4px 20px 0px rgba(0, 0, 0, 0.75);
+  padding: 20px;
+
 }
 
  .rooms {

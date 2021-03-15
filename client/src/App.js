@@ -1,12 +1,18 @@
 import React, { Component } from "react";
 import "./App.css";
-import { Link, Switch, Route, withRouter, useState } from "react-router-dom";
+import { Link, Switch, Route, withRouter } from "react-router-dom";
 import Reusable from "./pages/Reusable";
 import Favorites from "./pages/Favorites";
 import Homemade from "./pages/Homemade";
 import Profil from "./pages/Profil";
 import Modal from "./pages/Modal";
-import Navbar from "./components/Navbar";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faRetweet,
+  faBookmark,
+  faHandHoldingHeart,
+  faUserCircle,
+} from "@fortawesome/free-solid-svg-icons";
 
 class App extends Component {
   constructor(props) {
@@ -33,16 +39,16 @@ class App extends Component {
       <div className="app">
         <div className="menu">
           <Link className="link" to="/">
-            Reusable
+            <FontAwesomeIcon size="lg" icon={faRetweet} />
           </Link>
           <Link className="link" to="/favorites">
-            Favorites
+            <FontAwesomeIcon size="lg" icon={faBookmark} />
           </Link>
           <Link className="link" to="/homemade">
-            Homemade
+            <FontAwesomeIcon size="lg" icon={faHandHoldingHeart} />
           </Link>
           <Link className="link" to="/profil">
-            Profil
+            <FontAwesomeIcon size="lg" icon={faUserCircle} />
           </Link>
         </div>
         <Switch location={isModal ? this.previousLocation : location}>

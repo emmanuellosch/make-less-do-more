@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Favorites extends Component {
   render() {
     return (
-      <div className="favorites wrapper">
+      <div className="favorites-wrapper">
         <h2>Favorites</h2>
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem
         accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
