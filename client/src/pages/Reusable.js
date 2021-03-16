@@ -9,31 +9,31 @@ class Reusable extends Component {
         <div className="rooms">
           <Link
             className="frontpage"
-            to={{ pathname: "/modal/1", state: { modal: true } }}
+            to={{ pathname: "/modal/Kitchen", state: { modal: true } }}
           >
             Kitchen
           </Link>
           <Link
             className="frontpage"
-            to={{ pathname: "/modal/2", state: { modal: true } }}
+            to={{ pathname: "/modal/Bathroom", state: { modal: true } }}
           >
             Bathroom
           </Link>
           <Link
             className="frontpage"
-            to={{ pathname: "/modal/3", state: { modal: true } }}
+            to={{ pathname: "/modal/Livingroom", state: { modal: true } }}
           >
             Livingroom
           </Link>
           <Link
             className="frontpage"
-            to={{ pathname: "/modal/4", state: { modal: true } }}
+            to={{ pathname: "/modal/Sleepingroom", state: { modal: true } }}
           >
             Sleepingroom
           </Link>
           <Link
             className="frontpage"
-            to={{ pathname: "/modal/5", state: { modal: true } }}
+            to={{ pathname: "/modal/Kidsroom", state: { modal: true } }}
           >
             Kidsroom
           </Link>

@@ -16,6 +16,7 @@ body {
 
 .frontpage {
   color: #f77754;
+  
 }
 
 .home-wrapper {
@@ -116,13 +117,13 @@ body {
 .link {
   background-color: #537d91;
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   font-family: Arial;
-  padding: 10px;
+  width: 80px;
+  padding: 20px;
   border-radius: 10px;
   margin-right: 10px;
   box-shadow: 2px 4px 20px 0px rgba(0, 0, 0, 0.75);
-  padding: 20px;
 
 }
 
@@ -133,5 +134,6 @@ body {
   justify-content: space-around;
   padding: 1rem; 
 }
+
 
 `;

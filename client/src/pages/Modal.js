@@ -1,50 +1,37 @@
-import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
-import { disableBodyScroll, enableBodyScroll } from "body-scroll-lock";
+import React from "react";
+import ReactDom from "react-dom";
 
-class Modal extends Component {
-  constructor() {
-    super();
-    this.modalRef = React.createRef();
-  }
+const MODAL_STYLES = {
+  position: "fixed",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  backgroundColor: "#FFF",
+  padding: "50px",
+  zIndex: 1000,
+};
 
-  componentDidMount() {
-    const { isModal } = this.props;
+const OVERLAY_STYLES = {
+  position: "fixed",
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  backgroundColor: "rgba(0, 0, 0, .7)",
+  zIndex: 1000,
+};
 
-    if (isModal) {
-      disableBodyScroll(this.modalRef.current);
-    }
-  }
+export default function Modal({ open, children, onClose }) {
+  if (!open) return null;
 
-  componentWillUnmount() {
-    enableBodyScroll(this.modalRef.current);
-  }
-
-  render() {
-    const { id } = this.props.match.params;
-
-    if (this.props.isModal) {
-      return (
-        <div
-          ref={this.modalRef}
-          className="modal-wrapper"
-          onClick={() => this.props.history.goBack()}
-        >
-          <div className="modal" onClick={(e) => e.stopPropagation()}>
-            <h1>{id}</h1>
-            <p>Bathroom</p>
-          </div>
-        </div>
-      );
-    } else {
-      return (
-        <div className="no-modal-wrapper">
-          <h1>{id}</h1>
-          <p>Kitchen</p>
-        </div>
-      );
-    }
-  }
+  return ReactDom.createPortal(
+    <>
+      <div style={OVERLAY_STYLES} />
+      <div style={MODAL_STYLES}>
+        <button onClick={onClose}>Close Modal</button>
+        {children}
+      </div>
+    </>,
+    document.getElementById("portal")
+  );
 }
-
-export default withRouter(Modal);
