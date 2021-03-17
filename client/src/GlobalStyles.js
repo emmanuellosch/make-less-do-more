@@ -80,4 +80,39 @@ select,
   letter-spacing: 1px;
 }
 
+.homemade-wrapper {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 40px 25px;
+  background-color: whitesmoke;
+  font-family: Arial;
+  font-size: 16px;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.favorites-wrapper {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 40px 25px;
+  background-color: whitesmoke;
+  font-family: Arial;
+  font-size: 16px;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+}
+
+.profil-wrapper {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 40px 25px;
+  background-color: whitesmoke;
+  font-family: Arial;
+  font-size: 16px;
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+}
+
+
+
 `;
