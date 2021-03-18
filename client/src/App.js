@@ -10,18 +10,25 @@ import Navigation from "./components/Navigation";
 function App() {
   const recipes = [
     {
-      name: "My recipe",
-      supplies: ["honey", "paper"],
-      steps: ["Cook the honey", "Cut the paper"],
+      number: "0",
+      title: "Beeswax swaps",
+      author: "Emmanuel Losch",
+      subtle: "Lorem ipsum",
+      supplies: ["Need 1", "Need 2", "Need 3"],
+      steps: ["Step 9", "Step 8", "Step 19"],
     },
     {
-      name: "Another recipe",
-      supplies: ["water", "salt"],
-      steps: ["Mix water and salt", "Shake well", "cook"],
+      number: "1",
+      title: "Hallo",
+      author: "Emmanuel",
+      subtle: "Array",
+      supplies: ["Need 6", "Need 7", "Need 8"],
+      steps: ["Step 5", "Step 6", "Step 7"],
     },
   ];
 
   const [favoriteRecipes, setFavoriteRecipes] = useState([]);
+  console.log(favoriteRecipes);
 
   function addRecipeToFavorites(recipe) {
     setFavoriteRecipes([...favoriteRecipes, recipe]);
@@ -36,7 +43,12 @@ function App() {
           <Route path="/Favorites">
             <Favorites favoriteRecipes={favoriteRecipes} />
           </Route>
-          <Route path="/Homemade" component={Homemade} />
+          <Route path="/Homemade">
+            <Homemade
+              addRecipeToFavorites={addRecipeToFavorites}
+              recipes={recipes}
+            ></Homemade>
+          </Route>
 
           <Route path="/Profil" component={Profil} />
         </Switch>
