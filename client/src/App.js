@@ -17,7 +17,7 @@ function App() {
     {
       name: "Another recipe",
       supplies: ["water", "salt"],
-      steps: ["Mix water and salt", "Shake well"],
+      steps: ["Mix water and salt", "Shake well", "cook"],
     },
   ];
 
