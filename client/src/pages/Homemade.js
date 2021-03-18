@@ -1,7 +1,13 @@
-import React from "react";
+import styled from "styled-components";
+import RecipeCard from "../components/RecipeCard";
 
-const Homemade = (props) => {
-  return <div>Homemade</div>;
-};
+export default function Homemade() {
+  return (
+    <div className="homemade-wrapper">
+      <h1>Homemade</h1>
 
-export default Homemade;
+      {/*add mapp from app.js*/}
+      <RecipeCard />
+    </div>
+  );
+}
