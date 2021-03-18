@@ -2,10 +2,58 @@ import React, { useState } from "react";
 
 import styled from "styled-components";
 
-export default function RecipeCard() {
+export default function RecipeCard({ addRecipeToFavorites }) {
   const [showText, setShowText] = useState(false);
   const onClick = () => setShowText(!showText);
-  const Text = () => <Div>You clicked the button!</Div>;
+  const Text = () => (
+    <Div>
+      <h2>Supplies Needed</h2>
+      <ul>
+        <li>100% cotton fabric (suggested sizes to follow)</li>
+        <li>Scissors or pinking shears</li>
+        <li>
+          Beeswax pastilles or shaved block beeswax. These organic beeswax
+          pastilles work great!
+        </li>
+        <li>
+          Something to hang the wraps up to dry – such as a clothes hanger or
+          twine and clothespins
+        </li>
+        <li>Parchment paper or tin foil</li>
+        <li>Baking sheet(s) and oven </li>
+        <li>
+          A paint brush. This item is’t totally necessary, but is helpful to
+          spread the wax evenly across the fabric after it melts. That said,
+          keep in mind the brush will get covered in wax and may not be suitable
+          for certain future projects. To clean the brush afterwards, try
+          dipping it in hot/boiling water to remove the wax.{" "}
+        </li>
+      </ul>
+      <h2>Make the Beeswax Wraps</h2>
+      <p>Step One: Prep the Fabric</p>
+      <ul>
+        <li>
+          If you haven’t already, wash and dry your chosen fabric as needed.
+        </li>
+        <li>
+          Cut the fabric into desired shapes and sizes of your choice. (See
+          recommended sizes below.) For this particular demo, I was working with
+          limited size options since I created these homemade beeswax wraps from
+          an old small shirt. Plus, we already have quite a few larger wraps.{" "}
+        </li>
+        <li>
+          If you’re feeling especially crafty, you could hem the cut edges of
+          the fabric with a sewing machine. Another option is to cut the fabric
+          with pinking shears to reduce fraying. The wax itself will also slow
+          fraying.{" "}
+        </li>
+        <li>
+          Your homemade beeswax wraps don’t need to be square! They can be
+          rectangular or even cut into circles.{" "}
+        </li>
+      </ul>
+    </Div>
+  );
 
   return (
     <Card class="card-container">
@@ -22,8 +70,8 @@ export default function RecipeCard() {
           </span>
           <div class="card-read"></div>
           <button onClick={onClick}>Supplies and Steps</button>
-          //Button onClick AddToFavorites (Function from App.js)
           {showText ? <Text /> : null}
+          <button onClick={addRecipeToFavorites}>Add to Favorites</button>
           <span class="card-tag card-circle subtle"></span>
         </div>
         <img
