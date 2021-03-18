@@ -29,7 +29,7 @@ const Reusable = (props) => {
           <Kidsroom />
         </Route>
         <Route path="/">
-          <Div>
+          <Div activeClassName="active">
             <Link to={`${url}/Kitchen`}>Kitchen</Link>
             <Link to={`${url}/Bathroom`}>Bathroom</Link>
             <Link to={`${url}/Livingroom`}>Livingroom</Link>
@@ -47,15 +47,36 @@ export default Reusable;
 const Div = styled.div`
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  height: 90vh;
   justify-content: space-around;
   padding: 1rem;
-
   text-align: center;
+  background-image: url("https://images.unsplash.com/photo-1559837957-bab8edc53c85?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8emVybyUyMHdhc3RlfGVufDB8fDB8&auto=format&fit=crop&w=700&q=60");
+  background-position: "center";
+  background-size: "cover";
+  background-repeat: "no-repeat";
+
   a {
-    background-color: grey;
+    cursor: pointer;
+    background-color: #bebebe;
     border: 2px solid #fff;
-    color: #fff;
+    border-radius: 20px;
+    color: #922c88;
+    font-weight: bold;
     padding: 1.2rem;
+    opacity: 0.7;
+    box-shadow: 0 0 5px rgba(75, 75, 75, 0.07);
+  }
+
+  @media only screen and (min-width: 600px) {
+    background-position: center center;
+  }
+
+  @media only screen and (min-width: 768px) {
+    background-position: center center;
+  }
+
+  @media only screen and (max-width: 480px) {
+    background-position: center center;
   }
 `;

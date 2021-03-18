@@ -9,12 +9,12 @@ export default function RecipeCard({ addRecipeToFavorites, recipe }) {
     <Div>
       <h2>Supplies Needed</h2>
       <ul>
-        <li>{recipe.supplies}</li>
+        <p>{recipe.supplies}</p>
       </ul>
-      <h2>Make the Beeswax Wraps</h2>
-      <p>Step One: Prep the Fabric</p>
+      <h2>How to make it!</h2>
+      <p>Step One:</p>
       <ul>
-        <li>{recipe.steps}</li>
+        <p>{recipe.steps}</p>
       </ul>
     </Div>
   );
