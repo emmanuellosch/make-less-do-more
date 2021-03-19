@@ -1,12 +1,13 @@
 import React from "react";
+import RecipeCard from "../components/RecipeCard";
 
 export default function Favorites({ favoriteRecipes }) {
   return (
     <div className="favorites-wrapper">
       <h1>Favorites</h1>
-      {favoriteRecipes.map((favoriteRecipe) => {
-        <h2>{favoriteRecipe.name}</h2>;
-      })}
+      {favoriteRecipes.map((favoriteRecipe) => (
+        <RecipeCard recipe={favoriteRecipe} />
+      ))}
     </div>
   );
 }

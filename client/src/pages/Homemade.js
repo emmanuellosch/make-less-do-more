@@ -1,13 +1,16 @@
 import styled from "styled-components";
 import RecipeCard from "../components/RecipeCard";
 
-export default function Homemade() {
+export default function Homemade({ addRecipeToFavorites, recipes }) {
   return (
     <div className="homemade-wrapper">
       <h1>Homemade</h1>
-
-      {/*add mapp from app.js*/}
-      <RecipeCard />
+      {recipes.map((recipe) => (
+        <RecipeCard
+          addRecipeToFavorites={() => addRecipeToFavorites(recipe)}
+          recipe={recipe}
+        />
+      ))}
     </div>
   );
 }

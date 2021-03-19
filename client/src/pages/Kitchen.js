@@ -3,17 +3,24 @@ import { NavLink } from "react-router-dom";
 export default function Kitchen() {
   return (
     <div className="kitchen-wrapper">
-      <h2>Kitchen</h2> <br />
-      <h3>Your Disposables:</h3>
-      <p>From Shopping to cooking</p>
-      <ol>
+      <h2 className="card-title">Kitchen</h2> <br />
+      <p className="intro">
+        How to Move Towards a Zero-Waste Kitchen For starters, our goal here is
+        progress, not perfection. Going completely zero-waste in the kitchen is
+        a daunting thought, but with mindfulness it is not such a stretch from
+        what we’re already doing.{" "}
+      </p>{" "}
+      <br />
+      <h3 className="disposables">Your Disposables:</h3>
+      <p className="subtle_disposable">From Shopping to cooking</p>
+      <ol className="avoid">
         <li>Avoid packing products and plastic or paper bags. </li> <br />
         <li>Compost differs from waste</li> <br />
         <li>Plastic wrap</li> <br />
       </ol>
-      <h2>Make it reusable:</h2>
-      <p>Sustainable Swaps</p>
-      <ol>
+      <h2 className="reusable">Make it reusable:</h2>
+      <p className="subtle_substainable">Sustainable Swaps</p>
+      <ol className="swaps">
         <li>
           Shop with reusable containers and bags: Glass jars for bulk items like
           flour, seeds, nuts, spices, tea, honey, coconut oil and so on Metal
@@ -36,7 +43,7 @@ export default function Kitchen() {
           application
         </li>
         <br />
-        <li>Bees wax wrap</li>
+        <p className="recipe">Bees wax wrap</p>
 
         <NavLink className="link" to="/homemade">
           <button>Homemade</button>{" "}
