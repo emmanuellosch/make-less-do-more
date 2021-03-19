@@ -57,6 +57,8 @@ const Div = styled.div`
   line-height: 22px;
   margin: 10px 0;
   color: #aaa;
+  font-weight: bold;
+
   background-color: #fff;
   padding: 30px;
   position: relative;
