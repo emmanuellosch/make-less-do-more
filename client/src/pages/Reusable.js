@@ -4,7 +4,7 @@ import { Link, Route, Switch, useRouteMatch } from "react-router-dom";
 import Kitchen from "./Kitchen";
 import Bathroom from "./Bathroom";
 import Livingroom from "./Livingroom";
-import Sleepingroom from "./Sleepingroom";
+import Sleepingroom from "./Bedroom";
 import Kidsroom from "./Kidsroom";
 import kitchenreusable from "../images/kitchenreusable.jpg";
 
@@ -23,7 +23,7 @@ const Reusable = (props) => {
         <Route path={`${path}/Livingroom`}>
           <Livingroom />
         </Route>
-        <Route path={`${path}/Sleepingroom`}>
+        <Route path={`${path}/Bedroom`}>
           <Sleepingroom />
         </Route>
         <Route path={`${path}/Kidsroom`}>
@@ -34,7 +34,7 @@ const Reusable = (props) => {
             <Link to={`${url}/Kitchen`}>Kitchen</Link>
             <Link to={`${url}/Bathroom`}>Bathroom</Link>
             <Link to={`${url}/Livingroom`}>Livingroom</Link>
-            <Link to={`${url}/Sleepingroom`}>Sleepingroom</Link>
+            <Link to={`${url}/Bedroom`}>Bedroom</Link>
             <Link to={`${url}/Kidsroom`}>Kidsroom</Link>
           </Div>
         </Route>

@@ -9,7 +9,7 @@ export default function Kitchen() {
   const Text = () => (
     <div>
       <h3>Your Disposables:</h3>
-      <p>From Shopping to relaxing</p>
+      <p>From Shopping to cooking</p>
       <ol>
         <li>Avoid packing products and plastic or paper bags. </li> <br />
         <li>Compost differs from waste</li> <br />
@@ -42,7 +42,7 @@ export default function Kitchen() {
         <br />
       </ol>
       <NavLink className="link" to="/homemade">
-        <Button>Make your own soap in Homemade</Button>{" "}
+        <Button>Make your own Reusable Cotton Rounds in Homemade</Button>{" "}
       </NavLink>
       <br />
     </div>
@@ -55,7 +55,7 @@ export default function Kitchen() {
           <div class="card-body">
             <span class="card-number card-circle subtle">01</span>
             <span class="card-author subtle">John Smith</span>
-            <h2 class="card-title">Bathroom Hack #1</h2>
+            <h2 class="card-title">Bedroom Hack #1</h2>
             <span class="card-description subtle">
               {" "}
               How to Move Towards a Zero-Waste Kitchen For starters, our goal

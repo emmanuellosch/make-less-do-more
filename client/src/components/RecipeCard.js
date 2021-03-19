@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 export default function RecipeCard({ addRecipeToFavorites, recipe }) {
   const [showText, setShowText] = useState(false);
@@ -19,6 +20,8 @@ export default function RecipeCard({ addRecipeToFavorites, recipe }) {
     </Div>
   );
 
+  const element = <FontAwesomeIcon icon={faHeart} />;
+
   return (
     <Card class="card-container">
       <div class="card u-clearfix">
@@ -28,9 +31,12 @@ export default function RecipeCard({ addRecipeToFavorites, recipe }) {
           <h2 class="card-title">{recipe.title}</h2>
           <span class="card-description subtle">{recipe.subtle}</span>
           <div class="card-read"></div>
-          <button onClick={onClick}>Supplies and Steps</button>
+          <Button onClick={onClick}>Explore the Details</Button>
           {showText ? <Text /> : null}
-          <button onClick={addRecipeToFavorites}>Add to Favorites</button>
+          <button onClick={addRecipeToFavorites}>
+            <FontAwesomeIcon icon={faHeart} size="lg" className="font-upload" />
+            Add to Favorites
+          </button>
 
           <span class="card-tag card-circle subtle"></span>
         </div>
@@ -127,6 +133,7 @@ const Card = styled.div`
     font-weight: 300;
     line-height: 22px;
     margin: 10px 0;
+    font-weight: bold;
   }
 
   .card-read {
@@ -167,4 +174,20 @@ const Card = styled.div`
     width: 80%;
     z-index: -1;
   }
+
+  .font-upload:hover {
+    color: red;
+  }
+`;
+
+const Button = styled.button`
+  background-color: #bebebe;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  color: #922c88;
+  font-weight: bold;
+  padding: 1.2rem;
+  opacity: 0.7;
+  box-shadow: 0 0 5px rgba(75, 75, 75, 0.07);
+  text-transform: uppercase;
 `;
