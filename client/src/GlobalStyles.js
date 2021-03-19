@@ -16,9 +16,7 @@ export const GlobalStyles = createGlobalStyle`
   line-height: 1.5rem;
   letter-spacing: 1px;
 
-  .kitchen_img {
-    
-  }
+  
 
 }
 

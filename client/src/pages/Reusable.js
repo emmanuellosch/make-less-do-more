@@ -6,6 +6,7 @@ import Bathroom from "./Bathroom";
 import Livingroom from "./Livingroom";
 import Sleepingroom from "./Sleepingroom";
 import Kidsroom from "./Kidsroom";
+import kitchenreusable from "../images/kitchenreusable.jpg";
 
 const Reusable = (props) => {
   let { path, url } = useRouteMatch();
@@ -51,7 +52,9 @@ const Div = styled.div`
   justify-content: space-around;
   padding: 1rem;
   text-align: center;
-  background-image: url("https://images.unsplash.com/photo-1559837957-bab8edc53c85?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8emVybyUyMHdhc3RlfGVufDB8fDB8&auto=format&fit=crop&w=700&q=60");
+  //background-image: url(${kitchenreusable});
+  background-image: url("https://images.unsplash.com/photo-1559837957-bab8edc53c85?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8emVybyUyMHdhc3RlfGVufDB8fDB8&auto=format&fit=crop&w=900&q=60");
+
   background-position: "center";
   background-size: "cover";
   background-repeat: "no-repeat";

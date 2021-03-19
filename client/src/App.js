@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Reusable from "./pages/Reusable";
 import Favorites from "./pages/Favorites";
@@ -8,6 +7,7 @@ import Profil from "./pages/Profil";
 import Navigation from "./components/Navigation";
 import saveToLocal from "./lib/saveToLocal";
 import loadFromLocal from "./lib/loadFromLocal";
+import "./App.css";
 
 function App() {
   const STORAGE_KEY = "favoriteRecipes";
