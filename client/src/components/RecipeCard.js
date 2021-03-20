@@ -33,9 +33,8 @@ export default function RecipeCard({ addRecipeToFavorites, recipe }) {
           <div class="card-read"></div>
           <Button onClick={onClick}>Explore the Details</Button>
           {showText ? <Text /> : null}
-          <button onClick={addRecipeToFavorites}>
+          <button class="btn" onClick={addRecipeToFavorites}>
             <FontAwesomeIcon icon={faHeart} size="lg" className="font-upload" />
-            Add to Favorites
           </button>
 
           <span class="card-tag card-circle subtle"></span>
@@ -183,6 +182,15 @@ const Card = styled.div`
 `;
 
 const Button = styled.button`
+  .btn {
+    background-color: DodgerBlue; /* Blue background */
+    border: none; /* Remove borders */
+    color: white; /* White text */
+    padding: 12px 16px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+  }
+
   background-color: #bebebe;
   border: 2px solid #fff;
   border-radius: 20px;
