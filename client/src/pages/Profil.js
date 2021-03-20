@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 export default function Profil(
   onChange,
@@ -42,7 +44,7 @@ export default function Profil(
       <Div>
         <label for="photo-upload" className="custom-file-upload fas">
           <div className="img-wrap img-upload">
-            <img for="photo-upload" src={src} />
+            <FontAwesomeIcon icon={faUser} size="7x" className="photo-upload" />
           </div>
           <input id="photo-upload" type="file" onChange={onChange} />
         </label>
@@ -53,25 +55,25 @@ export default function Profil(
             onChange={onChange}
             maxlength="25"
             value={value}
-            placeholder="Alexa"
+            placeholder="Emmanuel"
             required
           />
         </div>
         <div className="field">
-          <span>status:</span>
+          <span>Zero Waste Status:</span>
           <input
             type="text"
             onChange={onChange}
             maxlength="35"
             value={value}
-            placeholder="It's a nice day!"
+            placeholder="Zero Waste Week 33!"
             required
           />
         </div>
         <div className="card">
           <form onSubmit={onSubmit}>
             <h1>Profile Card</h1>
-            <label className="custom-file-upload fas">
+            <label className="custom-file-upload">
               <div className="img-wrap">
                 <img for="photo-upload" src={src} />
               </div>
@@ -103,11 +105,15 @@ const Div = styled.div`
     color: #054231;
     display: flex;
     justify-content: center;
-    background: #49afa8;
+    background: #bebebe;
     background-image: url("https://github.com/OlgaKoplik/CodePen/blob/master/leaf.png?raw=true");
     background-repeat: no-repeat, no-repeat;
     background-position: 200% -40%;
     background-size: 80%;
+  }
+
+  .fa-user {
+    color: #922c88;
   }
 
   .card {
@@ -118,10 +124,11 @@ const Div = styled.div`
     border-radius: 25px;
     display: flex;
     justify-content: center;
-    box-shadow: 15px 10px 25px 0px #3fa1a9;
+    box-shadow: 15px 10px 25px 0px #bebebe;
     background: #fff;
-    background-image: url("https://images.unsplash.com/photo-1533119408463-b0f487583ff6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8bGVhdmVzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"),
-      background-repeat no-repeat, no-repeat;
+    background-image: url("https://github.com/OlgaKoplik/CodePen/blob/master/leaf2.png?raw=true"),
+      url("https://github.com/OlgaKoplik/CodePen/blob/master/leaf.png?raw=true");
+    background-repeat: no-repeat, no-repeat;
     background-position: 120% -5%, 200% -40%;
     background-size: 40%, 80%;
     animation: open 0.5s;
@@ -180,10 +187,6 @@ const Div = styled.div`
   .img-upload:hover:before {
     opacity: 1;
   }
-  img {
-    width: auto;
-    height: 100%;
-  }
 
   span {
     text-transform: uppercase;
@@ -231,18 +234,14 @@ const Div = styled.div`
     cursor: pointer;
     border-radius: 25px;
     border: none;
-    background: #64d488;
+    background: #bebebe;
   }
   .save {
-    font-weight: 600;
-    left: -20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    width: 20px;
-    box-shadow: 20px 0px 40px 0px;
+    color: #922c88;
+    width: 180px;
   }
   .edit {
-    color: #fff;
+    color: #922c88;
     width: 180px;
   }
   button:hover {
@@ -269,19 +268,5 @@ const Div = styled.div`
   }
   .lds-ripple div:nth-child(2) {
     animation-delay: -0.5s;
-  }
-
-  .fa-instagram {
-    position: absolute;
-    color: #79f1a4;
-    top: 3%;
-    right: 2%;
-    font-size: 38px;
-  }
-  .fa-instagram:hover {
-    font-size: 42px;
-
-    transition: all 0.1s linear;
-    cursor: pointer;
   }
 `;
