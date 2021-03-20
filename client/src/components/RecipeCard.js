@@ -179,6 +179,9 @@ const Card = styled.div`
   .font-upload:hover {
     color: red;
   }
+
+  .font-upload {
+  }
 `;
 
 const Button = styled.button`
