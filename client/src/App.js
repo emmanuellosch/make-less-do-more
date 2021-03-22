@@ -1,31 +1,28 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { v4 as uuidv4 } from "uuid";
 import Reusable from "./pages/Reusable";
 import Favorites from "./pages/Favorites";
 import Homemade from "./pages/Homemade";
 import Profil from "./pages/Profil";
 import Navigation from "./components/Navigation";
-import saveToLocal from "./lib/saveToLocal";
-import loadFromLocal from "./lib/loadFromLocal";
-//import FileUpload from "./components/UploadComponent";
+import { useLocalStorage } from "./hooks/useLocalStorage";
 
 import "./App.css";
 
 function App() {
-  const STORAGE_KEY = "favoriteRecipes";
+  const apiServerURL = process.env.REACT_APP_API_SERVER_URL;
+  const [favoriteRecipes, setFavoriteRecipes] = useLocalStorage(
+    "favoriteRecipes",
+    []
+  );
 
-  /*
-  const [newUserInfo, setNewUserInfo] = useState({
-    profileImages: [],
-  });
-
-  const updateUploadedFiles = (files) =>
-    setNewUserInfo({ ...newUserInfo, profileImages: files });
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-  };
-  */
+  useEffect(() => {
+    fetch(apiServerURL + "/favoritRecipes")
+      .then((result) => result.json())
+      .then((favoriteRecipes) => setFavoriteRecipes(favoriteRecipes))
+      .catch((error) => console.error(error.message));
+  }, []);
 
   const recipes = [
     {
@@ -70,17 +67,36 @@ function App() {
     },
   ];
 
-  const [favoriteRecipes, setFavoriteRecipes] = useState(
-    loadFromLocal(STORAGE_KEY) ?? []
-  );
-
-  useEffect(() => {
-    saveToLocal(STORAGE_KEY, favoriteRecipes);
-  }, [favoriteRecipes]);
-
-  function addRecipeToFavorites(recipe) {
+  const updateFavoriteRecipes = (recipe) =>
     setFavoriteRecipes([...favoriteRecipes, recipe]);
-  }
+  /*
+  const addRecipeToFavorites = (recipe) => {
+    setFavoriteRecipes([...favoriteRecipes, { ...recipe, id: uuidv4() }]);
+  };
+  */
+
+  const deleteFavoriteRecipes = (id) => {
+    const updatedList = favoriteRecipes.filter(
+      (favoriteRecipes) => favoriteRecipes.id !== id
+    );
+    setFavoriteRecipes(updatedList);
+  };
+
+  const addRecipeToFavorites = (recipe) => {
+    if (
+      favoriteRecipes.some(
+        (favoriteRecipe) => favoriteRecipes.id === favoriteRecipes.id
+      )
+    ) {
+      setFavoriteRecipes(
+        favoriteRecipes.filter(
+          (favoriteRecipes) => favoriteRecipes.id !== favoriteRecipes.id
+        )
+      );
+    } else {
+      setFavoriteRecipes([...favoriteRecipes, recipe]);
+    }
+  };
 
   return (
     <div>
@@ -94,6 +110,8 @@ function App() {
           <Route path="/Homemade">
             <Homemade
               addRecipeToFavorites={addRecipeToFavorites}
+              recipes={recipes}
+              deleteFavoriteRecipes={deleteFavoriteRecipes}
               recipes={recipes}
             ></Homemade>
           </Route>
