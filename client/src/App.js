@@ -7,10 +7,25 @@ import Profil from "./pages/Profil";
 import Navigation from "./components/Navigation";
 import saveToLocal from "./lib/saveToLocal";
 import loadFromLocal from "./lib/loadFromLocal";
+//import FileUpload from "./components/UploadComponent";
+
 import "./App.css";
 
 function App() {
   const STORAGE_KEY = "favoriteRecipes";
+
+  /*
+  const [newUserInfo, setNewUserInfo] = useState({
+    profileImages: [],
+  });
+
+  const updateUploadedFiles = (files) =>
+    setNewUserInfo({ ...newUserInfo, profileImages: files });
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
+  */
 
   const recipes = [
     {

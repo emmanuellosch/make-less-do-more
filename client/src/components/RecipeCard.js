@@ -186,12 +186,12 @@ const Card = styled.div`
 
 const Button = styled.button`
   .btn {
-    background-color: DodgerBlue; /* Blue background */
-    border: none; /* Remove borders */
-    color: white; /* White text */
-    padding: 12px 16px; /* Some padding */
-    font-size: 16px; /* Set a font size */
-    cursor: pointer; /* Mouse pointer on hover */
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
   }
 
   background-color: #bebebe;
