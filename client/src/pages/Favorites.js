@@ -8,10 +8,11 @@ export default function Favorites({ favoriteRecipes, deleteFavoriteRecipes }) {
       {favoriteRecipes.map((favoriteRecipe) => (
         <RecipeCard
           recipe={favoriteRecipe}
-          addRecipeToFavorites={() => deleteFavoriteRecipes(favoriteRecipes)}
+          toggleRecipeToFavorites={() =>
+            deleteFavoriteRecipes(favoriteRecipe.id)
+          }
         />
-      ))}{" "}
-      <button onClick={deleteFavoriteRecipes}>x</button>
+      ))}
     </div>
   );
 }

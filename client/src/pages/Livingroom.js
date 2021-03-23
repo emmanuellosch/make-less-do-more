@@ -49,32 +49,32 @@ export default function Livingroom() {
   );
 
   return (
-    <div className="kitchen-wrapper">
-      <Div class="card-container">
-        <div class="card u-clearfix">
-          <div class="card-body">
-            <span class="card-number card-circle subtle">01</span>
-            <span class="card-author subtle">John Smith</span>
-            <h2 class="card-title">Livingroom Hack #1</h2>
-            <span class="card-description subtle">
+    <div classNameName="kitchen-wrapper">
+      <Div className="card-container">
+        <div className="card u-clearfix">
+          <div className="card-body">
+            <span className="card-number card-circle subtle">01</span>
+            <span className="card-author subtle">John Smith</span>
+            <h2 className="card-title">Livingroom Hack #1</h2>
+            <span className="card-description subtle">
               {" "}
               How to Move Towards a Zero-Waste Kitchen For starters, our goal
               here is progress, not perfection. Going completely zero-waste in
               the kitchen is a daunting thought, but with mindfulness it is not
               such a stretch from what we’re already doing.
             </span>
-            <div class="card-read"></div>
+            <div className="card-read"></div>
             <Button onClick={onClick}>Read more</Button>
             {showDetails ? <Details /> : null}
-            <span class="card-tag card-circle subtle">C</span>
+            <span className="card-tag card-circle subtle">C</span>
           </div>
           <img
             src="https://s15.postimg.cc/temvv7u4r/recipe.jpg"
             alt=""
-            class="card-media"
+            className="card-media"
           />
         </div>
-        <div class="card-shadow"></div>
+        <div className="card-shadow"></div>
       </Div>
 
       <P className="return_home">

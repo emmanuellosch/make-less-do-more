@@ -2,9 +2,13 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import SnackWraps_beeswax from "../images/SnackWraps_beeswax.jpg";
 
-export default function RecipeCard({ addRecipeToFavorites, recipe }) {
+export default function RecipeCard({ toggleRecipeToFavorites, recipe }) {
   const [showDetails, setShowDetails] = useState(false);
+
+  if (!recipe) return null;
+
   const onClick = () => setShowDetails(!showDetails);
   const Details = () => (
     <Div>
@@ -20,32 +24,26 @@ export default function RecipeCard({ addRecipeToFavorites, recipe }) {
     </Div>
   );
 
-  const element = <FontAwesomeIcon icon={faHeart} />;
-
   return (
-    <Card class="card-container">
-      <div class="card u-clearfix">
-        <div class="card-body">
-          <span class="card-number card-circle subtle">{recipe.number}</span>
-          <span class="card-author subtle">{recipe.author}</span>
-          <h2 class="card-title">{recipe.title}</h2>
-          <span class="card-description subtle">{recipe.subtle}</span>
-          <div class="card-read"></div>
+    <Card className="card-container">
+      <div className="u-clearfix">
+        <div className="card-body">
+          <span className="card-number card-circle subtle">{recipe.id}</span>
+          <span className="card-author subtle">{recipe.author}</span>
+          <h2 className="card-title">{recipe.title}</h2>
+          <span className="card-description subtle">{recipe.subtle}</span>
+          <div className="card-read"></div>
           <Button onClick={onClick}>Explore the Details</Button>
           {showDetails ? <Details /> : null}
-          <button onClick={addRecipeToFavorites}>
+          <button onClick={toggleRecipeToFavorites}>
             <FontAwesomeIcon icon={faHeart} size="lg" className="font-upload" />
           </button>
 
-          <span class="card-tag card-circle subtle"></span>
+          <span className="card-tag subtle"></span>
         </div>
-        <img
-          src="https://images.unsplash.com/photo-1569600187472-a0d8b8cf606a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8YmVlc3dheHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=60"
-          alt=""
-          class="card-media"
-        />
+        <img src={SnackWraps_beeswax} alt="" className="card-media" />
       </div>
-      <div class="card-shadow"></div>
+      <div className="card-shadow"></div>
     </Card>
   );
 }
@@ -164,6 +162,7 @@ const Card = styled.div`
 
   .card-media {
     float: right;
+    max-width: 100%;
   }
 
   .card-shadow {

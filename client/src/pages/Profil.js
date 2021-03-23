@@ -2,6 +2,10 @@ import React, { useReducer, useState } from "react";
 import styled from "styled-components";
 import FileUpload from "../components/UploadComponent";
 
+import { profile } from "../profile/profile";
+
+console.log(profile);
+
 export default function Profil() {
   const [submitting, setSubmitting] = useState(false);
   const [newUserInfo, setNewUserInfo] = useState({
@@ -49,6 +53,7 @@ export default function Profil() {
   return (
     <div className="profil-wrapper">
       <h1>Profil</h1>
+      <img src={profile.image} width="200" />
       {submitting && (
         <div>
           You are submitting the following:
