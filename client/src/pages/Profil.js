@@ -1,109 +1,81 @@
-import React, { useReducer, useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import FileUpload from "../components/UploadComponent";
 
 import { profile } from "../profile/profile";
 
-console.log(profile);
-
 export default function Profil() {
-  const [submitting, setSubmitting] = useState(false);
-  const [newUserInfo, setNewUserInfo] = useState({
-    profileImages: [],
-  });
-
-  const formReducer = (state, event) => {
-    if (event.reset) {
-      return {
-        name: "",
-        status: "",
-      };
-    }
-    return {
-      ...state,
-      [event.name]: event.value,
-    };
-  };
-
-  const [formData, setFormData] = useReducer(formReducer, {});
-
-  const updateUploadedFiles = (files) =>
-    setNewUserInfo({ ...newUserInfo, profileImages: files });
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    event.preventDefault();
-    setSubmitting(true);
-
-    setTimeout(() => {
-      setSubmitting(false);
-      setFormData({
-        reset: true,
-      });
-    }, 3000);
-  };
-
-  const handleChange = (event) => {
-    setFormData({
-      name: event.target.name,
-      value: event.target.value,
-    });
-  };
-
   return (
     <div className="profil-wrapper">
-      <h1>Profil</h1>
-      <img src={profile.image} width="200" />
-      {submitting && (
-        <div>
-          You are submitting the following:
-          <ul>
-            {Object.entries(formData).map(([name, value]) => (
-              <li key={name}>
-                <strong>{name}</strong>:{value.toString()}
-              </li>
-            ))}
-          </ul>
+      <Div>
+        <div className="card">
+          <form>
+            <h1>Profile Card</h1>
+            <label className="custom-file-upload">
+              <div className="img-wrap">
+                <img src={profile.image} width="200" />
+              </div>
+            </label>
+            <div className="name">{profile.name}</div>
+            <div className="status">{profile.status}</div>
+            <button type="submit" className="edit">
+              Edit Profile{" "}
+            </button>
+          </form>
         </div>
-      )}
-      <form onSubmit={handleSubmit}>
-        <h2>Profile Card</h2>
-        <FileUpload
-          accept=".jpg,.png,.jpeg"
-          label="Profile Image(s)"
-          multiple
-          updateFilesCb={updateUploadedFiles}
-        />
-
-        <fieldset disabled={submitting}>
-          <label>
-            <p>Name</p>
-            <input
-              name="name"
-              onChange={handleChange}
-              value={formData.name || ""}
-            />
-          </label>
-        </fieldset>
-
-        <fieldset>
-          <label>
-            <p>Status</p>
-            <input
-              name="status"
-              onChange={handleChange}
-              value={formData.status || ""}
-            />
-          </label>
-        </fieldset>
-
-        <Button type="submit" className="save" disabled={submitting}>
-          Save
-        </Button>
-      </form>
+      </Div>
     </div>
   );
 }
+
+const Div = styled.div`
+  .card {
+    width: 310px;
+    height: 627px;
+    padding: 15px;
+    margin-top: 40px;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 15px 10px 25px 0px #922c88;
+    background: #fff;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img-wrap {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+
+  button {
+    position: relative;
+    color: #054231;
+    letter-spacing: 1px;
+    margin: 20px;
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+    transition: 0.5s;
+    border-radius: 10px;
+    cursor: pointer;
+    border-radius: 25px;
+    border: none;
+    background: #922c88;
+  }
+
+  .edit {
+    color: #fff;
+    width: 180px;
+  }
+`;
 
 const Button = styled.button`
   background-color: #bebebe;
