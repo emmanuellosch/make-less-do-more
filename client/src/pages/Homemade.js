@@ -1,11 +1,8 @@
 import { Switch, Route, useParams, useRouteMatch } from "react-router-dom";
 import RecipeCard from "../components/RecipeCard";
+import Search from "../components/search";
 
-export default function Homemade({
-  addRecipeToFavorites,
-  deleteFavoriteRecipe,
-  recipes,
-}) {
+export default function Homemade({ addRecipeToFavorites, recipes }) {
   let { path } = useRouteMatch();
 
   const SingleRecipeCard = () => {
@@ -23,9 +20,19 @@ export default function Homemade({
     ) : null;
   };
 
+  const { search } = window.location;
+  const query = new URLSearchParams(search).get("s");
+
   return (
     <div className="homemade-wrapper">
       <h1>Homemade</h1>
+      <Search />
+      <ul>
+        {recipes.map((recipe) => (
+          <li key={recipe.id}></li>
+        ))}
+      </ul>
+
       <Switch>
         <Route path={`${path}/:id`}>
           <SingleRecipeCard />

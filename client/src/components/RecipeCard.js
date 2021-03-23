@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faHeart, faTrash } from "@fortawesome/free-solid-svg-icons";
 import SnackWraps_beeswax from "../images/SnackWraps_beeswax.jpg";
 
 export default function RecipeCard({ toggleRecipeToFavorites, recipe }) {
@@ -23,6 +23,13 @@ export default function RecipeCard({ toggleRecipeToFavorites, recipe }) {
       </ul>
     </Div>
   );
+
+  const icons = {
+    id: 0,
+    name: "faHeart",
+    id: 1,
+    name: "fTrash",
+  };
 
   return (
     <Card className="card-container">
