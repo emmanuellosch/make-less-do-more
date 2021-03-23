@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
-const SearchBar = () => (
+const SearchBar = ({ searchQuery, setSearchQuery }) => (
   <Form action="/" method="get">
     <label htmlFor="header-search">
       <span className="visually-hidden">Search through all recipes!</span>
     </label>
     <input
+      value={searchQuery}
+      onInput={(e) => setSearchQuery(e.target.value)}
       type="text"
       id="header-search"
       placeholder="Search through all recipes!"
