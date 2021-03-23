@@ -13,7 +13,6 @@ export default function Homemade({
         <RecipeCard
           addRecipeToFavorites={() => addRecipeToFavorites(recipe)}
           recipe={recipe}
-          deleteFavoriteRecipe={() => deleteFavoriteRecipe(recipe.number)}
         />
       ))}{" "}
     </div>

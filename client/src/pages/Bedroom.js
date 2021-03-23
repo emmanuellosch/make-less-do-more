@@ -3,7 +3,7 @@ import React, { useState } from "react";
 
 import styled from "styled-components";
 
-export default function Kitchen() {
+export default function Bedroom() {
   const [showText, setShowText] = useState(false);
   const onClick = () => setShowText(!showText);
   const Text = () => (
@@ -50,7 +50,7 @@ export default function Kitchen() {
 
   return (
     <div className="kitchen-wrapper">
-      <Card class="card-container">
+      <Div class="card-container">
         <div class="card u-clearfix">
           <div class="card-body">
             <span class="card-number card-circle subtle">01</span>
@@ -75,7 +75,7 @@ export default function Kitchen() {
           />
         </div>
         <div class="card-shadow"></div>
-      </Card>
+      </Div>
 
       <P className="return_home">
         <NavLink to="/Reusable">&lt; Return to Reusable</NavLink>
@@ -84,7 +84,7 @@ export default function Kitchen() {
   );
 }
 
-const Card = styled.div`
+const Div = styled.div`
   *,
   *:before,
   *:after {

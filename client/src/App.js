@@ -69,9 +69,14 @@ function App() {
 
   const updateFavoriteRecipes = (recipe) =>
     setFavoriteRecipes([...favoriteRecipes, recipe]);
-  /*
+
   const addRecipeToFavorites = (recipe) => {
     setFavoriteRecipes([...favoriteRecipes, { ...recipe, id: uuidv4() }]);
+  };
+
+  /*
+  const addRecipe = (recipe) => {
+    setRecipes([...recipes, { ...recipe, id: uuidv4() }]);
   };
   */
 
@@ -82,21 +87,17 @@ function App() {
     setFavoriteRecipes(updatedList);
   };
 
-  const addRecipeToFavorites = (recipe) => {
-    if (
-      favoriteRecipes.some(
-        (favoriteRecipe) => favoriteRecipes.id === favoriteRecipes.id
-      )
-    ) {
-      setFavoriteRecipes(
+  /*
+  const removeFavoriteRecipe = (recipe) => {
+    if (favoriteRecipes(recipe)) {
+      updateFavoriteRecipes(
         favoriteRecipes.filter(
-          (favoriteRecipes) => favoriteRecipes.id !== favoriteRecipes.id
+          (favoriteRecipe) => favoriteRecipe._id !== recipe._id
         )
       );
-    } else {
-      setFavoriteRecipes([...favoriteRecipes, recipe]);
     }
   };
+  */
 
   return (
     <div>
@@ -105,13 +106,14 @@ function App() {
         <Switch>
           <Route path="/Reusable" component={Reusable} />
           <Route path="/Favorites">
-            <Favorites favoriteRecipes={favoriteRecipes} />
+            <Favorites
+              favoriteRecipes={favoriteRecipes}
+              deleteFavoriteRecipes={deleteFavoriteRecipes}
+            />
           </Route>
           <Route path="/Homemade">
             <Homemade
               addRecipeToFavorites={addRecipeToFavorites}
-              recipes={recipes}
-              deleteFavoriteRecipes={deleteFavoriteRecipes}
               recipes={recipes}
             ></Homemade>
           </Route>

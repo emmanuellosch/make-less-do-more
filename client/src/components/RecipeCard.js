@@ -4,9 +4,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 export default function RecipeCard({ addRecipeToFavorites, recipe }) {
-  const [showText, setShowText] = useState(false);
-  const onClick = () => setShowText(!showText);
-  const Text = () => (
+  const [showDetails, setShowDetails] = useState(false);
+  const onClick = () => setShowDetails(!showDetails);
+  const Details = () => (
     <Div>
       <h2>Supplies Needed</h2>
       <ul>
@@ -32,8 +32,8 @@ export default function RecipeCard({ addRecipeToFavorites, recipe }) {
           <span class="card-description subtle">{recipe.subtle}</span>
           <div class="card-read"></div>
           <Button onClick={onClick}>Explore the Details</Button>
-          {showText ? <Text /> : null}
-          <button class="btn" onClick={addRecipeToFavorites}>
+          {showDetails ? <Details /> : null}
+          <button onClick={addRecipeToFavorites}>
             <FontAwesomeIcon icon={faHeart} size="lg" className="font-upload" />
           </button>
 
@@ -185,15 +185,6 @@ const Card = styled.div`
 `;
 
 const Button = styled.button`
-  .btn {
-    background-color: DodgerBlue;
-    border: none;
-    color: white;
-    padding: 12px 16px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-
   background-color: #bebebe;
   border: 2px solid #fff;
   border-radius: 20px;

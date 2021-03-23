@@ -3,10 +3,10 @@ import React, { useState } from "react";
 
 import styled from "styled-components";
 
-export default function Kitchen() {
-  const [showText, setShowText] = useState(false);
-  const onClick = () => setShowText(!showText);
-  const Text = () => (
+export default function Kidsroom() {
+  const [showDetails, setShowDetails] = useState(false);
+  const onClick = () => setShowDetails(!showDetails);
+  const Details = () => (
     <div>
       <h3>Your Disposables:</h3>
       <p>From Shopping to playing</p>
@@ -50,7 +50,7 @@ export default function Kitchen() {
 
   return (
     <div className="kitchen-wrapper">
-      <Card class="card-container">
+      <Div class="card-container">
         <div class="card u-clearfix">
           <div class="card-body">
             <span class="card-number card-circle subtle">01</span>
@@ -65,7 +65,7 @@ export default function Kitchen() {
             </span>
             <div class="card-read"></div>
             <Button onClick={onClick}>Read more</Button>
-            {showText ? <Text /> : null}
+            {showDetails ? <Details /> : null}
             <span class="card-tag card-circle subtle">C</span>
           </div>
           <img
@@ -75,7 +75,7 @@ export default function Kitchen() {
           />
         </div>
         <div class="card-shadow"></div>
-      </Card>
+      </Div>
 
       <P className="return_home">
         <NavLink to="/Reusable">&lt; Return to Reusable</NavLink>
@@ -84,7 +84,7 @@ export default function Kitchen() {
   );
 }
 
-const Card = styled.div`
+const Div = styled.div`
   *,
   *:before,
   *:after {

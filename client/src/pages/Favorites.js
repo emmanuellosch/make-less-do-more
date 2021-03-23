@@ -6,7 +6,10 @@ export default function Favorites({ favoriteRecipes, deleteFavoriteRecipes }) {
     <div className="favorites-wrapper">
       <h1>Favorites</h1>
       {favoriteRecipes.map((favoriteRecipe) => (
-        <RecipeCard recipe={favoriteRecipe} />
+        <RecipeCard
+          recipe={favoriteRecipe}
+          addRecipeToFavorites={() => deleteFavoriteRecipes(favoriteRecipes)}
+        />
       ))}{" "}
       <button onClick={deleteFavoriteRecipes}>x</button>
     </div>
