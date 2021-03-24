@@ -41,6 +41,7 @@ export default function Homemade({ addRecipeToFavorites, recipes }) {
   return (
     <div className="homemade-wrapper">
       <h1>Homemade</h1>
+
       <Announcer message={`${filteredRecipes.length} recipes`} />
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <ul>
@@ -54,7 +55,7 @@ export default function Homemade({ addRecipeToFavorites, recipes }) {
           <SingleRecipeCard />
         </Route>
         <Route exact path={`${path}/`}>
-          {recipes.map((recipe) => (
+          {filteredRecipes.map((recipe) => (
             <RecipeCard
               key={recipe.id}
               toggleRecipeToFavorites={() => addRecipeToFavorites(recipe)}

@@ -11,6 +11,7 @@ export default function Favorites({ favoriteRecipes, deleteFavoriteRecipes }) {
           toggleRecipeToFavorites={() =>
             deleteFavoriteRecipes(favoriteRecipe.id)
           }
+          isFavorite
         />
       ))}
     </div>

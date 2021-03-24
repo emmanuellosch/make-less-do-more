@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import livingroom from "../images/livingroom.jpg";
 
 import styled from "styled-components";
 
@@ -49,7 +50,7 @@ export default function Livingroom() {
   );
 
   return (
-    <div classNameName="kitchen-wrapper">
+    <div className="kitchen-wrapper">
       <Div className="card-container">
         <div className="card u-clearfix">
           <div className="card-body">
@@ -68,11 +69,7 @@ export default function Livingroom() {
             {showDetails ? <Details /> : null}
             <span className="card-tag card-circle subtle">C</span>
           </div>
-          <img
-            src="https://s15.postimg.cc/temvv7u4r/recipe.jpg"
-            alt=""
-            className="card-media"
-          />
+          <img src={livingroom} alt="" className="card-media" />
         </div>
         <div className="card-shadow"></div>
       </Div>
@@ -195,6 +192,7 @@ const Div = styled.div`
 
   .card-media {
     float: right;
+    max-width: 100%;
   }
 
   .card-shadow {

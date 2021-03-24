@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHeart, faTrash } from "@fortawesome/free-solid-svg-icons";
-import SnackWraps_beeswax from "../images/SnackWraps_beeswax.jpg";
-
-export default function RecipeCard({ toggleRecipeToFavorites, recipe }) {
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+export default function RecipeCard({
+  toggleRecipeToFavorites,
+  isFavorite,
+  recipe,
+}) {
   const [showDetails, setShowDetails] = useState(false);
 
   if (!recipe) return null;
@@ -24,13 +26,6 @@ export default function RecipeCard({ toggleRecipeToFavorites, recipe }) {
     </Div>
   );
 
-  const icons = {
-    id: 0,
-    name: "faHeart",
-    id: 1,
-    name: "fTrash",
-  };
-
   return (
     <Div2 className="card-container">
       <div className="card u-clearfix">
@@ -40,15 +35,20 @@ export default function RecipeCard({ toggleRecipeToFavorites, recipe }) {
           <h2 className="card-title">{recipe.title}</h2>
           <span className="card-description subtle">{recipe.subtle}</span>
           <div className="card-read"></div>
-          <Button onClick={onClick}>Explore the Details</Button>
+          <div className="card-button-bar">
+            <Button onClick={onClick}>Explore the Details</Button>
+            <FontAwesomeIcon
+              icon={faHeart}
+              size="3x"
+              className="font-upload"
+              onClick={toggleRecipeToFavorites}
+              style={isFavorite ? { color: "rebeccapurple" } : ""}
+            />
+          </div>{" "}
           {showDetails ? <Details /> : null}
-          <button onClick={toggleRecipeToFavorites}>
-            <FontAwesomeIcon icon={faHeart} size="lg" className="font-upload" />
-          </button>
-
           <span className="card-tag subtle"></span>
         </div>
-        <img src={SnackWraps_beeswax} alt="" className="card-media" />
+        <img src={recipe.image} alt="" className="card-media" />
       </div>
       <div className="card-shadow"></div>
     </Div2>
@@ -182,11 +182,21 @@ const Div2 = styled.div`
     z-index: -1;
   }
 
-  .font-upload:hover {
-    color: red;
+  .card-button-bar {
+    display: flex;
   }
 
   .font-upload {
+    display: inline-block;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    background: #efefef;
+    border-radius: 50%;
+    padding: 0.5rem;
+  }
+
+  .font-upload:hover {
+    color: rebeccapurple;
   }
 `;
 

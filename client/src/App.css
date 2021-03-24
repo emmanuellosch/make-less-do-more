@@ -1,5 +1,6 @@
 .navbar {
   border-bottom: solid 1px #ebebeb;
+  background: rgba(255, 255, 255, 0.8);
 }
 .bottom-tab-nav {
   border-top: solid 1px #ebebeb;

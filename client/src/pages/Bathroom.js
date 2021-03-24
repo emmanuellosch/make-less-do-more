@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import React, { useState } from "react";
+import tooth from "../images/tooth.jpg";
 
 import styled from "styled-components";
 
@@ -68,11 +69,7 @@ export default function Bathroom() {
             {showDetails ? <Details /> : null}
             <span className="card-tag card-circle subtle">C</span>
           </div>
-          <img
-            src="https://s15.postimg.cc/temvv7u4r/recipe.jpg"
-            alt=""
-            className="card-media"
-          />
+          <img src={tooth} alt="" className="card-media" />
         </div>
         <div className="card-shadow"></div>
       </Div>
@@ -195,6 +192,7 @@ const Div = styled.div`
 
   .card-media {
     float: right;
+    max-width: 100%;
   }
 
   .card-shadow {
