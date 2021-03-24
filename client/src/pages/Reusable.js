@@ -4,13 +4,12 @@ import { Link, Route, Switch, useRouteMatch } from "react-router-dom";
 import Kitchen from "./Kitchen";
 import Bathroom from "./Bathroom";
 import Livingroom from "./Livingroom";
-import Sleepingroom from "./Sleepingroom";
+import Sleepingroom from "./Bedroom";
 import Kidsroom from "./Kidsroom";
 import kitchenreusable from "../images/kitchenreusable.jpg";
-
 const Reusable = (props) => {
   let { path, url } = useRouteMatch();
-  console.log(path, url);
+
   return (
     <>
       <Switch>
@@ -23,7 +22,7 @@ const Reusable = (props) => {
         <Route path={`${path}/Livingroom`}>
           <Livingroom />
         </Route>
-        <Route path={`${path}/Sleepingroom`}>
+        <Route path={`${path}/Bedroom`}>
           <Sleepingroom />
         </Route>
         <Route path={`${path}/Kidsroom`}>
@@ -34,7 +33,7 @@ const Reusable = (props) => {
             <Link to={`${url}/Kitchen`}>Kitchen</Link>
             <Link to={`${url}/Bathroom`}>Bathroom</Link>
             <Link to={`${url}/Livingroom`}>Livingroom</Link>
-            <Link to={`${url}/Sleepingroom`}>Sleepingroom</Link>
+            <Link to={`${url}/Bedroom`}>Bedroom</Link>
             <Link to={`${url}/Kidsroom`}>Kidsroom</Link>
           </Div>
         </Route>
@@ -52,8 +51,7 @@ const Div = styled.div`
   justify-content: space-around;
   padding: 1rem;
   text-align: center;
-  //background-image: url(${kitchenreusable});
-  background-image: url("https://images.unsplash.com/photo-1559837957-bab8edc53c85?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8emVybyUyMHdhc3RlfGVufDB8fDB8&auto=format&fit=crop&w=900&q=60");
+  background-image: url("https://images.unsplash.com/photo-1559837957-bab8edc53c85?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8emVybyUyMHdhc3RlfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60");
 
   background-position: "center";
   background-size: "cover";

@@ -1,11 +1,18 @@
-import React, { useState } from "react";
-
+import { useState } from "react";
 import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+export default function RecipeCard({
+  toggleRecipeToFavorites,
+  isFavorite,
+  recipe,
+}) {
+  const [showDetails, setShowDetails] = useState(false);
 
-export default function RecipeCard({ addRecipeToFavorites, recipe }) {
-  const [showText, setShowText] = useState(false);
-  const onClick = () => setShowText(!showText);
-  const Text = () => (
+  if (!recipe) return null;
+
+  const onClick = () => setShowDetails(!showDetails);
+  const Details = () => (
     <Div>
       <h2>Supplies Needed</h2>
       <ul>
@@ -20,28 +27,31 @@ export default function RecipeCard({ addRecipeToFavorites, recipe }) {
   );
 
   return (
-    <Card class="card-container">
-      <div class="card u-clearfix">
-        <div class="card-body">
-          <span class="card-number card-circle subtle">{recipe.number}</span>
-          <span class="card-author subtle">{recipe.author}</span>
-          <h2 class="card-title">{recipe.title}</h2>
-          <span class="card-description subtle">{recipe.subtle}</span>
-          <div class="card-read"></div>
-          <button onClick={onClick}>Supplies and Steps</button>
-          {showText ? <Text /> : null}
-          <button onClick={addRecipeToFavorites}>Add to Favorites</button>
-
-          <span class="card-tag card-circle subtle"></span>
+    <Div2 className="card-container">
+      <div className="card u-clearfix">
+        <div className="card-body">
+          <span className="card-number card-circle subtle">{recipe.id}</span>
+          <span className="card-author subtle">{recipe.author}</span>
+          <h2 className="card-title">{recipe.title}</h2>
+          <span className="card-description subtle">{recipe.subtle}</span>
+          <div className="card-read"></div>
+          <div className="card-button-bar">
+            <Button onClick={onClick}>Explore the Details</Button>
+            <FontAwesomeIcon
+              icon={faHeart}
+              size="3x"
+              className="font-upload"
+              onClick={toggleRecipeToFavorites}
+              style={isFavorite ? { color: "rebeccapurple" } : ""}
+            />
+          </div>{" "}
+          {showDetails ? <Details /> : null}
+          <span className="card-tag subtle"></span>
         </div>
-        <img
-          src="https://images.unsplash.com/photo-1569600187472-a0d8b8cf606a?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8YmVlc3dheHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1600&q=60"
-          alt=""
-          class="card-media"
-        />
+        <img src={recipe.image} alt="" className="card-media" />
       </div>
-      <div class="card-shadow"></div>
-    </Card>
+      <div className="card-shadow"></div>
+    </Div2>
   );
 }
 
@@ -51,6 +61,8 @@ const Div = styled.div`
   line-height: 22px;
   margin: 10px 0;
   color: #aaa;
+  font-weight: bold;
+
   background-color: #fff;
   padding: 30px;
   position: relative;
@@ -58,7 +70,7 @@ const Div = styled.div`
   z-index: 1;
 `;
 
-const Card = styled.div`
+const Div2 = styled.div`
   *,
   *:before,
   *:after {
@@ -127,6 +139,7 @@ const Card = styled.div`
     font-weight: 300;
     line-height: 22px;
     margin: 10px 0;
+    font-weight: bold;
   }
 
   .card-read {
@@ -156,6 +169,7 @@ const Card = styled.div`
 
   .card-media {
     float: right;
+    max-width: 100%;
   }
 
   .card-shadow {
@@ -167,4 +181,33 @@ const Card = styled.div`
     width: 80%;
     z-index: -1;
   }
+
+  .card-button-bar {
+    display: flex;
+  }
+
+  .font-upload {
+    display: inline-block;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    background: #efefef;
+    border-radius: 50%;
+    padding: 0.5rem;
+  }
+
+  .font-upload:hover {
+    color: rebeccapurple;
+  }
+`;
+
+const Button = styled.button`
+  background-color: #bebebe;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  color: #922c88;
+  font-weight: bold;
+  padding: 1.2rem;
+  opacity: 0.7;
+  box-shadow: 0 0 5px rgba(75, 75, 75, 0.07);
+  text-transform: uppercase;
 `;
