@@ -32,11 +32,11 @@ const Div = styled.div`
     width: 310px;
     height: 627px;
     padding: 15px;
-    margin-top: 40px;
+    margin: 40px auto;
     border-radius: 25px;
     display: flex;
     justify-content: center;
-    box-shadow: 15px 10px 25px 0px #922c88;
+    box-shadow: 0px 15px 25px -10px #922c88;
     background: #fff;
   }
 
