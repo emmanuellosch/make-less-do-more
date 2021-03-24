@@ -32,8 +32,8 @@ export default function RecipeCard({ toggleRecipeToFavorites, recipe }) {
   };
 
   return (
-    <Card className="card-container">
-      <div className="u-clearfix">
+    <Div2 className="card-container">
+      <div className="card u-clearfix">
         <div className="card-body">
           <span className="card-number card-circle subtle">{recipe.id}</span>
           <span className="card-author subtle">{recipe.author}</span>
@@ -51,7 +51,7 @@ export default function RecipeCard({ toggleRecipeToFavorites, recipe }) {
         <img src={SnackWraps_beeswax} alt="" className="card-media" />
       </div>
       <div className="card-shadow"></div>
-    </Card>
+    </Div2>
   );
 }
 
@@ -70,7 +70,7 @@ const Div = styled.div`
   z-index: 1;
 `;
 
-const Card = styled.div`
+const Div2 = styled.div`
   *,
   *:before,
   *:after {

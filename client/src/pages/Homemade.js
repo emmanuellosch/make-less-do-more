@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import RecipeCard from "../components/RecipeCard";
 import Search from "../components/search";
+import Announcer from "../components/announcer";
 
 export default function Homemade({ addRecipeToFavorites, recipes }) {
   let { path } = useRouteMatch();
@@ -40,6 +41,7 @@ export default function Homemade({ addRecipeToFavorites, recipes }) {
   return (
     <div className="homemade-wrapper">
       <h1>Homemade</h1>
+      <Announcer message={`${filteredRecipes.length} recipes`} />
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
       <ul>
         {filteredRecipes.map((recipe) => (

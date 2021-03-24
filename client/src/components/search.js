@@ -1,21 +1,31 @@
+import { useHistory } from "react-router-dom";
+
 import styled from "styled-components";
 
-const SearchBar = ({ searchQuery, setSearchQuery }) => (
-  <Form action="/" method="get">
-    <label htmlFor="header-search">
-      <span className="visually-hidden">Search through all recipes!</span>
-    </label>
-    <input
-      value={searchQuery}
-      onInput={(e) => setSearchQuery(e.target.value)}
-      type="text"
-      id="header-search"
-      placeholder="Search through all recipes!"
-      name="s"
-    />
-    <button type="submit">Search</button>
-  </Form>
-);
+const SearchBar = ({ searchQuery, setSearchQuery }) => {
+  const history = useHistory();
+  const onSubmit = (e) => {
+    history.push(`?s=${searchQuery}`);
+    e.preventDefault();
+  };
+
+  return (
+    <Form action="/" method="get" autoComplete="off" onSubmit={onSubmit}>
+      <label htmlFor="header-search">
+        <span className="visually-hidden">Search through all recipes!</span>
+      </label>
+      <input
+        value={searchQuery}
+        onInput={(e) => setSearchQuery(e.target.value)}
+        type="text"
+        id="header-search"
+        placeholder="Search through all recipes!"
+        name="s"
+      />
+      <button type="submit">Search</button>
+    </Form>
+  );
+};
 
 export default SearchBar;
 
