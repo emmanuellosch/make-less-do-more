@@ -12,17 +12,17 @@ const SearchBar = ({ searchQuery, setSearchQuery }) => {
   return (
     <Form action="/" method="get" autoComplete="off" onSubmit={onSubmit}>
       <label htmlFor="header-search">
-        <span className="visually-hidden">Search through all recipes!</span>
+        <span className="visually-hidden">Look for a recipe?</span>
       </label>
-      <input
+      <Input
         value={searchQuery}
         onInput={(e) => setSearchQuery(e.target.value)}
         type="text"
         id="header-search"
-        placeholder="Search through all recipes!"
+        placeholder="Look for a recipe?"
         name="s"
       />
-      <button type="submit">Search</button>
+      <Button type="submit">Search</Button>
     </Form>
   );
 };
@@ -39,4 +39,32 @@ const Form = styled.form`
     white-space: nowrap;
     width: 1px;
   }
+`;
+
+const Input = styled.input`
+  background-color: #bebebe;
+  border: 2px solid #fff;
+  border-radius: 20px;
+  color: #922c88;
+  font-weight: bold;
+  padding: 1.2rem;
+  opacity: 0.7;
+  box-shadow: 0 0 5px rgba(75, 75, 75, 0.07);
+  margin-top: 24px;
+`;
+
+const Button = styled.button`
+  position: relative;
+  color: #ffffff;
+  letter-spacing: 1px;
+  margin: 20px;
+  font-size: 18px;
+  padding: 10px;
+  text-align: center;
+  transition: 0.5s;
+  border-radius: 10px;
+  cursor: pointer;
+  border-radius: 25px;
+  border: none;
+  background: #922c88;
 `;

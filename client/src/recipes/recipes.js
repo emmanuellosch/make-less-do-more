@@ -20,7 +20,7 @@ const recipes = [
   },
   {
     id: 2,
-    title: "Zero Waste - Coffee.",
+    title: "Zero Waste - Coffee",
     author: "Thomas",
     subtle:
       "For you over caffeinated coffee addicts out there, time to toss the coffee pods! Turn that vice into a virtue by making zero waste coffee.",
@@ -32,7 +32,7 @@ const recipes = [
   },
   {
     id: 3,
-    title: "Zero Waste - Kitchen Cleaning.",
+    title: "Zero Waste - Kitchen Cleaning",
     author: "Rachel",
     subtle:
       "Just because you’ve gone zero waste and avoid plastic bottles with chemical based household cleaners, doesn’t mean you can’t keep your kitchen sparkly clean. ",
