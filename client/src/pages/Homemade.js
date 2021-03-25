@@ -1,7 +1,7 @@
 import { Switch, Route, useParams, useRouteMatch } from "react-router-dom";
 import { useState } from "react";
 
-import RecipeCard from "../components/RecipeCard";
+import RecipeCard from "../components/recipeCard";
 import Search from "../components/search";
 import Announcer from "../components/announcer";
 

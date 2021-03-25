@@ -42,7 +42,7 @@ export default function RecipeCard({
               size="3x"
               className="font-upload"
               onClick={toggleRecipeToFavorites}
-              style={isFavorite ? { color: "rebeccapurple" } : ""}
+              style={isFavorite ? { color: "#922c88" } : ""}
             />
           </div>{" "}
           {showDetails ? <Details /> : null}
@@ -196,7 +196,7 @@ const Div2 = styled.div`
   }
 
   .font-upload:hover {
-    color: rebeccapurple;
+    color: #922c88;
   }
 `;
 
