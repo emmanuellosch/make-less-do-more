@@ -60,6 +60,10 @@ const Div = styled.div`
   background-repeat: "no-repeat";
 
   .logo1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
   }
 
   a {
