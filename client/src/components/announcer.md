@@ -5,5 +5,5 @@ This is a documentation about the Announcer-Component. Whenever the message chan
 Now, as you search, screen reader users will receive an update letting them know how many posts are on the page.
 
 ```js
-<Announcer />
+<Announcer message="3 recipes" />
 ```
