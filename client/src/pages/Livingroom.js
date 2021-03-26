@@ -10,37 +10,52 @@ export default function Livingroom() {
   const Details = () => (
     <Div3>
       <h3>Your Disposables:</h3>
-      <p>From Shopping to cooking</p>
+      <p>From Shopping to relaxing</p>
       <ol>
-        <li>Avoid packing products and plastic or paper bags. </li> <br />
-        <li>Compost differs from waste</li> <br />
-        <li>Plastic wrap</li> <br />
+        <li>
+          Avoid non-sustainable products. Especially plastic, like artificial
+          plants and the like, which is probably one of the worst types of waste
+          as it takes forever to break down. There’s probably a more sustainable
+          version of the living decor you’re after.{" "}
+        </li>{" "}
+        <br />
+        <li>
+          Buy less stuff. Yes, that’s right. Stop buying stuff that you don’t
+          really need or things that you won’t use. Don’t buy into the hype of
+          having more than you need. All this in turn just goes to waste and
+          ends up needlessly in the landfills.
+        </li>{" "}
+        <br />
+        <li>
+          Recycle. This goes without saying, plus it’s not that hard once you
+          get in the habit. Teach the kids how to recycle and the importance of
+          recycling as well.
+        </li>{" "}
+        <br />
       </ol>
       <h2>Make it reusable:</h2>
       <p>Sustainable Swaps</p>
       <ol>
         <li>
-          Shop with reusable containers and bags: Glass jars for bulk items like
-          flour, seeds, nuts, spices, tea, honey, coconut oil and so on Metal
-          containers, such as Lunchbots or tiffins for meat and fish (Life
-          Without Plastic sells all sorts of them) Cloth shopping bags and
-          homemade cloth produce bags for produce and bulk foods like pasta or
-          cat food
+          Minimise. When it comes to zero waste, prevention is better than cure.
+          So before you go out and by that extra coffee table or tv unit, ask
+          yourself “Do you really need it?” If you don’t, than you don’t need to
+          add potential waste to the room
         </li>
         <br />
         <li>
-          Zero waste means zero trash and zero recycling (because you buy so
-          little in packaging). I exempt compost from the category of waste.
-          That doesn’t mean I buy more food than I can eat or throw edible food
-          on the compost heap. In fact, even my vegetable scraps don’t make it
-          to the heap until after I’ve made broth out of them. Occasionally I
-          find the odd furry lemon or a puddle of what-had-been-parsley in the
-          back of the fridge. The good news is that compost can save the world!
-          It sucks carbon out of the air and not only that, a half-inch layer of
-          this black gold can still increase yields six years after its
-          application
+          Save energy. As always, saving energy doesn’t have to be hard. It
+          could be as simple as switching off unused appliances from the
+          powerpoint. Before you go to bed, turn off the unused power. This
+          could help reduce your carbon footprint.
         </li>
         <br />
+        <li>
+          Upcycle. I love this. Turning something old into something new of
+          value. That old couch, don’t throw it out! You could probably upcycle
+          it and get it upholstered. You could probably do the same and upcycle
+          the coffee table as well.
+        </li>
       </ol>
       <NavLink className="link" to="/homemade">
         <Button>Reuse what you already have in Homemade</Button>{" "}
@@ -59,10 +74,10 @@ export default function Livingroom() {
             <h2 className="card-title">Livingroom Hack #1</h2>
             <span className="card-description subtle">
               {" "}
-              How to Move Towards a Zero-Waste Kitchen For starters, our goal
-              here is progress, not perfection. Going completely zero-waste in
-              the kitchen is a daunting thought, but with mindfulness it is not
-              such a stretch from what we’re already doing.
+              Honestly, a zero waste living room follows similar guidelines to a
+              zero waste bedroom: make conscious furniture purchases! We do our
+              best to shop secondhand for furniture, and we only buy what we
+              really need. Also, we try to make do with what we already have.
             </span>
             <div className="card-read"></div>
             <Button onClick={onClick}>Read more</Button>

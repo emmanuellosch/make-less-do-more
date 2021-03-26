@@ -10,37 +10,53 @@ export default function Bathroom() {
   const Details = () => (
     <Div3>
       <h2>Your Disposables:</h2>
-      <p>From Shopping to relaxing</p>
+      <p>From Shopping to bodycare</p>
       <ol>
-        <li>Avoid packing products and plastic or paper bags. </li> <br />
-        <li>Compost differs from waste</li> <br />
-        <li>Plastic wrap</li> <br />
+        <li>
+          Toothbrushes are not recyclable and their packaging may not be in your
+          area either. With how frequently we switch them out, a sustainable
+          option is necessary and easy to swap in.{" "}
+        </li>{" "}
+        <br />
+        <li>
+          Soft tubes are not accepted for recycling in many areas, making this
+          an item that is likely to end up in the trash when it’s empty.
+        </li>{" "}
+        <br />
+        <li>
+          Conventional products come in plastic bottles or soft tubes that are
+          difficult to recycle, not mention that new bottles must be purchased
+          time and again. If you have more than one bottle on the go, you may
+          also have yourself some unnecessary shower clutter.
+        </li>{" "}
+        <br />
       </ol>
       <h2>Make it reusable:</h2>
       <p>Sustainable Swaps</p>
       <ol>
         <li>
-          Shop with reusable containers and bags: Glass jars for bulk items like
-          flour, seeds, nuts, spices, tea, honey, coconut oil and so on Metal
-          containers, such as Lunchbots or tiffins for meat and fish (Life
-          Without Plastic sells all sorts of them) Cloth shopping bags and
-          homemade cloth produce bags for produce and bulk foods like pasta or
-          cat food
+          Swap: Bamboo toothbrushes are biodegradable and compostable, with
+          bamboo being a sustainable crop. They are even available in children’s
+          sizes! Keep in mind that nylon bristles are not biodegradable and must
+          be disposed of separately, while natural fibre bristles do not last as
+          long.
         </li>
         <br />
         <li>
-          Zero waste means zero trash and zero recycling (because you buy so
-          little in packaging). I exempt compost from the category of waste.
-          That doesn’t mean I buy more food than I can eat or throw edible food
-          on the compost heap. In fact, even my vegetable scraps don’t make it
-          to the heap until after I’ve made broth out of them. Occasionally I
-          find the odd furry lemon or a puddle of what-had-been-parsley in the
-          back of the fridge. The good news is that compost can save the world!
-          It sucks carbon out of the air and not only that, a half-inch layer of
-          this black gold can still increase yields six years after its
-          application
+          Swap: There are a few great DIY recipes for toothpaste and
+          toothpowders here, and many bulk shops are now offering refills in
+          your own container. Commercial options in glass jars and recyclable
+          metal tubes are hitting mainstream stores as well. Be sure to speak to
+          your dentist about what sustainable option is best for you!
         </li>
         <br />
+        <li>
+          Swap: No matter your lifestyle or hair type, there is bound to be a
+          sustainable option that works for you. Both shampoo and conditioner
+          can be found in bars, with ingredients to suit your needs. Your local
+          bulk store may offer refills, or you may choose a subscription service
+          that accepts empty bottles in return.
+        </li>
       </ol>
       <NavLink className="link" to="/homemade">
         <Button>Make your own soap in Homemade</Button>{" "}
@@ -59,10 +75,10 @@ export default function Bathroom() {
             <h2 className="card-title">Bathroom Hack #1</h2>
             <span className="card-description subtle">
               {" "}
-              How to Move Towards a Zero-Waste Kitchen For starters, our goal
-              here is progress, not perfection. Going completely zero-waste in
-              the kitchen is a daunting thought, but with mindfulness it is not
-              such a stretch from what we’re already doing.
+              Like the kitchen, the bathroom can be a big source of waste. It is
+              typically home to a myriad of consumables, disposables, and
+              impulse buys. If you have ever done a full bathroom clean out, you
+              know just how much stuff can be packed into a little room!
             </span>
             <div className="card-read"></div>
             <Button onClick={onClick}>Read more</Button>

@@ -10,35 +10,41 @@ export default function Bedroom() {
   const Text = () => (
     <Div3>
       <h3>Your Disposables:</h3>
-      <p>From Shopping to cooking</p>
+      <p>From Shopping to sleeping</p>
       <ol>
-        <li>Avoid packing products and plastic or paper bags. </li> <br />
-        <li>Compost differs from waste</li> <br />
+        <li>
+          Ditch the face wipes. Did you know that 93% of all blocked sewers in
+          the UK are a result of wet wipes! Why not switch to reusable cleansing
+          wipes to take your makeup off and clean your face.{" "}
+        </li>{" "}
+        <br />
+        <li>
+          Most conventional cotton sheets are treated with chemicals (including
+          chlorine, formaldehyde, and silicon) to keep them from shrinking,
+          losing their shape, and wrinkling. Some are treated with chemicals to
+          produce a sheen.{" "}
+        </li>{" "}
+        <br />
         <li>Plastic wrap</li> <br />
       </ol>
       <h2>Make it reusable:</h2>
       <p>Sustainable Swaps</p>
       <ol>
         <li>
-          Shop with reusable containers and bags: Glass jars for bulk items like
-          flour, seeds, nuts, spices, tea, honey, coconut oil and so on Metal
-          containers, such as Lunchbots or tiffins for meat and fish (Life
-          Without Plastic sells all sorts of them) Cloth shopping bags and
-          homemade cloth produce bags for produce and bulk foods like pasta or
-          cat food
+          Zero Waste isn’t all about plastic and when you think about Zero Waste
+          in the bedroom you might not automatically think about clothes. But if
+          you think about todays fast fashion and how wasteful that is you’ll
+          start to understand what Zero Waste really means. Fast fashion is the
+          second dirtiest industry in the World next to big oil! If you already
+          have a wardrobe full of clothes do you really need to go out and buy
+          the latest new style dress?
         </li>
         <br />
         <li>
-          Zero waste means zero trash and zero recycling (because you buy so
-          little in packaging). I exempt compost from the category of waste.
-          That doesn’t mean I buy more food than I can eat or throw edible food
-          on the compost heap. In fact, even my vegetable scraps don’t make it
-          to the heap until after I’ve made broth out of them. Occasionally I
-          find the odd furry lemon or a puddle of what-had-been-parsley in the
-          back of the fridge. The good news is that compost can save the world!
-          It sucks carbon out of the air and not only that, a half-inch layer of
-          this black gold can still increase yields six years after its
-          application
+          if you’re looking for a new bedside cabinet or set of drawers you can
+          spruce your old ones up with a bit of paint. If you don’t have any
+          then you could scour the charity shops or freecycle papers for some
+          cheap buys and upcycle them.
         </li>
         <br />
       </ol>
@@ -59,10 +65,11 @@ export default function Bedroom() {
             <h2 className="card-title">Bedroom Hack #5</h2>
             <span className="card-description subtle">
               {" "}
-              How to Move Towards a Zero-Waste Kitchen For starters, our goal
-              here is progress, not perfection. Going completely zero-waste in
-              the kitchen is a daunting thought, but with mindfulness it is not
-              such a stretch from what we’re already doing.
+              You want your bedroom to be a calm and relaxing sanctuary where
+              you can unwind and relax before drifting off into a restful
+              night’s sleep. So, you want it to be free from clutter and nasty
+              chemicals. Here are a few tips on how you can start achieving Zero
+              Waste in the Bedroom.
             </span>
             <div className="card-read"></div>
             <Button onClick={onClick}>Read more</Button>
