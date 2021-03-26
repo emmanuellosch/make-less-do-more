@@ -2,9 +2,9 @@ import { Switch, Route, useParams, useRouteMatch } from "react-router-dom";
 import { useState } from "react";
 import styled from "styled-components";
 
-import RecipeCard from "../components/recipeCard";
-import Search from "../components/search";
-import Announcer from "../components/announcer";
+import RecipeCard from "../components/RecipeCard";
+import Search from "../components/Search";
+import Announcer from "../components/Announcer";
 
 export default function Homemade({ addRecipeToFavorites, recipes }) {
   let { path } = useRouteMatch();

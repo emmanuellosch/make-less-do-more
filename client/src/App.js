@@ -4,7 +4,7 @@ import Reusable from "./pages/Reusable";
 import Favorites from "./pages/Favorites";
 import Homemade from "./pages/Homemade";
 import Profil from "./pages/Profil";
-import Navigation from "./components/navigation";
+import Navigation from "./components/Navigation";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 import recipes from "./recipes/recipes";
 

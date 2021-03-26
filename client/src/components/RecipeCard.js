@@ -14,14 +14,19 @@ export default function RecipeCard({
   const onClick = () => setShowDetails(!showDetails);
   const Details = () => (
     <Div>
-      <h2>Supplies Needed</h2>
+      <h2>Supplies Needed:</h2>
       <ul>
-        <p>{recipe.supplies}</p>
+        {recipe.supplies.map((supply) => (
+          <li>{supply}</li>
+        ))}
       </ul>
-      <h2>How to make it!</h2>
+
+      <h2>How to make it:</h2>
       <p>Step One:</p>
       <ul>
-        <p>{recipe.steps}</p>
+        {recipe.steps.map((step) => (
+          <li>{step}</li>
+        ))}
       </ul>
     </Div>
   );
@@ -68,6 +73,22 @@ const Div = styled.div`
   position: relative;
   box-shadow: 0 0 5px rgba(75, 75, 75, 0.07);
   z-index: 1;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+    column-count: 1;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  h2 {
+    color: #555;
+    margin-bottom: 30px;
+  }
 `;
 
 const Div2 = styled.div`

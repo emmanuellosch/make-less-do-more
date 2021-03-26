@@ -33,11 +33,12 @@ const tabs = [
 ];
 
 const Navigation = (props) => {
+  const position = props.position === "static" ? "" : "fixed-bottom";
   return (
     <div>
       {/* Bottom Tab Navigator*/}
       <nav
-        className="navbar fixed-bottom navbar-light d-block d-lg-none bottom-tab-nav"
+        className={`navbar ${position} navbar-light d-block bottom-tab-nav`}
         role="navigation"
       >
         <Nav className="w-100">

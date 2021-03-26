@@ -31,7 +31,7 @@ const Reusable = (props) => {
         </Route>
         <Route path="/">
           <Div activeClassName="active">
-            <img src={logo1} alt="logo" className="logo1" />;
+            <img src={logo1} alt="logo" className="logo1" />
             <Link to={`${url}/Kitchen`}>Kitchen</Link>
             <Link to={`${url}/Bathroom`}>Bathroom</Link>
             <Link to={`${url}/Livingroom`}>Livingroom</Link>
@@ -53,11 +53,11 @@ const Div = styled.div`
   justify-content: space-around;
   padding: 1rem;
   text-align: center;
-  background-image: url("https://images.unsplash.com/photo-1559837957-bab8edc53c85?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8emVybyUyMHdhc3RlfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60");
+  background-image: url("/images/kitchenreusable.jpg");
 
-  background-position: "center";
-  background-size: "cover";
-  background-repeat: "no-repeat";
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   .logo1 {
     display: block;
