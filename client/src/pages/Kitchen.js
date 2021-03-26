@@ -7,7 +7,7 @@ export default function Kitchen() {
   const [showDetails, setShowDetails] = useState(false);
   const onClick = () => setShowDetails(!showDetails);
   const Details = () => (
-    <div>
+    <Div3>
       <h3>Your Disposables:</h3>
       <p>From Shopping to cooking</p>
       <ol>
@@ -45,7 +45,7 @@ export default function Kitchen() {
         <Button>Make your own Bees Wax wraps in Homemade</Button>
       </NavLink>
       <br />
-    </div>
+    </Div3>
   );
 
   return (
@@ -53,9 +53,9 @@ export default function Kitchen() {
       <Div className="card-container">
         <div className="card u-clearfix">
           <div className="card-body">
-            <span className="card-number card-circle subtle">01</span>
-            <span className="card-author subtle">John Smith</span>
-            <h2 className="card-title">Kitchen Hack #1</h2>
+            <span className="card-number card-circle subtle">02</span>
+            <span className="card-author subtle">Emma Smith</span>
+            <h2 className="card-title">Kitchen Hack #2</h2>
             <span className="card-description subtle">
               {" "}
               How to Move Towards a Zero-Waste Kitchen For starters, our goal
@@ -228,4 +228,39 @@ const P = styled.p`
   box-shadow: 0 0 5px rgba(75, 75, 75, 0.07);
   text-transform: uppercase;
   margin-top: 24px;
+`;
+
+const Div3 = styled.div`
+  display: inline-block;
+  font-weight: 300;
+  line-height: 22px;
+  margin: 10px 0;
+  color: #aaa;
+  font-weight: bold;
+
+  background-color: #fff;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 0 5px rgba(75, 75, 75, 0.07);
+  z-index: 1;
+
+  ol {
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+    column-count: 1;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  h2 {
+    color: #555;
+    margin-bottom: 30px;
+  }
+
+  p {
+    color: #922c88;
+  }
 `;

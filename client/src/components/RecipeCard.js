@@ -14,15 +14,14 @@ export default function RecipeCard({
   const onClick = () => setShowDetails(!showDetails);
   const Details = () => (
     <Div>
-      <h2>Supplies Needed:</h2>
+      <h2>Supplies:</h2>
       <ul>
         {recipe.supplies.map((supply) => (
           <li>{supply}</li>
         ))}
-      </ul>
-
-      <h2>How to make it:</h2>
-      <p>Step One:</p>
+      </ul>{" "}
+      <br />
+      <h2>Doing:</h2>
       <ul>
         {recipe.steps.map((step) => (
           <li>{step}</li>

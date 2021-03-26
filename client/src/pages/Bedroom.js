@@ -8,7 +8,7 @@ export default function Bedroom() {
   const [showText, setShowText] = useState(false);
   const onClick = () => setShowText(!showText);
   const Text = () => (
-    <div>
+    <Div3>
       <h3>Your Disposables:</h3>
       <p>From Shopping to cooking</p>
       <ol>
@@ -46,7 +46,7 @@ export default function Bedroom() {
         <Button>Make your own Reusable Cotton Rounds in Homemade</Button>{" "}
       </NavLink>
       <br />
-    </div>
+    </Div3>
   );
 
   return (
@@ -54,9 +54,9 @@ export default function Bedroom() {
       <Div className="card-container">
         <div className="card u-clearfix">
           <div className="card-body">
-            <span className="card-number card-circle subtle">01</span>
-            <span className="card-author subtle">John Smith</span>
-            <h2 className="card-title">Bedroom Hack #1</h2>
+            <span className="card-number card-circle subtle">05</span>
+            <span className="card-author subtle">Sam Smith</span>
+            <h2 className="card-title">Bedroom Hack #5</h2>
             <span className="card-description subtle">
               {" "}
               How to Move Towards a Zero-Waste Kitchen For starters, our goal
@@ -229,4 +229,39 @@ const P = styled.p`
   box-shadow: 0 0 5px rgba(75, 75, 75, 0.07);
   text-transform: uppercase;
   margin-top: 24px;
+`;
+
+const Div3 = styled.div`
+  display: inline-block;
+  font-weight: 300;
+  line-height: 22px;
+  margin: 10px 0;
+  color: #aaa;
+  font-weight: bold;
+
+  background-color: #fff;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 0 5px rgba(75, 75, 75, 0.07);
+  z-index: 1;
+
+  ol {
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+    column-count: 1;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  h2 {
+    color: #555;
+    margin-bottom: 30px;
+  }
+
+  p {
+    color: #922c88;
+  }
 `;

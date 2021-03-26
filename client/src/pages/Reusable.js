@@ -63,6 +63,7 @@ const Div = styled.div`
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 28px;
     width: 50%;
   }
 

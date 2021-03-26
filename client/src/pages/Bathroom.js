@@ -8,8 +8,8 @@ export default function Bathroom() {
   const [showDetails, setShowDetails] = useState(false);
   const onClick = () => setShowDetails(!showDetails);
   const Details = () => (
-    <div>
-      <h3>Your Disposables:</h3>
+    <Div3>
+      <h2>Your Disposables:</h2>
       <p>From Shopping to relaxing</p>
       <ol>
         <li>Avoid packing products and plastic or paper bags. </li> <br />
@@ -46,7 +46,7 @@ export default function Bathroom() {
         <Button>Make your own soap in Homemade</Button>{" "}
       </NavLink>
       <br />
-    </div>
+    </Div3>
   );
 
   return (
@@ -229,4 +229,39 @@ const P = styled.p`
   box-shadow: 0 0 5px rgba(75, 75, 75, 0.07);
   text-transform: uppercase;
   margin-top: 24px;
+`;
+
+const Div3 = styled.div`
+  display: inline-block;
+  font-weight: 300;
+  line-height: 22px;
+  margin: 10px 0;
+  color: #aaa;
+  font-weight: bold;
+
+  background-color: #fff;
+  padding: 30px;
+  position: relative;
+  box-shadow: 0 0 5px rgba(75, 75, 75, 0.07);
+  z-index: 1;
+
+  ol {
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+    column-count: 1;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  h2 {
+    color: #555;
+    margin-bottom: 30px;
+  }
+
+  p {
+    color: #922c88;
+  }
 `;

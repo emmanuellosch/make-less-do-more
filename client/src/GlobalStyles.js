@@ -5,10 +5,17 @@ export const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
 }
 
+h1 {
+  color: #922c88;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-bottom-style: solid;
+}
+
 
   .kitchen-wrapper {
   max-width: 500px;
-  margin: 50px auto;
+  margin-bottom: 50px;
   padding: 40px 25px;
   background-color: whitesmoke;
   font-family: Arial;
@@ -22,7 +29,7 @@ export const GlobalStyles = createGlobalStyle`
 
   .bathroom-wrapper {
   max-width: 500px;
-  margin: 50px auto;
+  margin-bottom: 50px;
   padding: 40px 25px;
   background-color: whitesmoke;
   font-family: Arial;
@@ -33,7 +40,7 @@ export const GlobalStyles = createGlobalStyle`
 
 .livingroom-wrapper {
   max-width: 500px;
-  margin: 50px auto;
+  margin-bottom: 50px;
   padding: 40px 25px;
   background-color: whitesmoke;
   font-family: Arial;
@@ -43,7 +50,7 @@ export const GlobalStyles = createGlobalStyle`
 }
 .sleepingroom-wrapper {
   max-width: 500px;
-  margin: 50px auto;
+  margin-bottom: 50px;
   padding: 40px 25px;
   background-color: whitesmoke;
   font-family: Arial;
@@ -54,7 +61,7 @@ export const GlobalStyles = createGlobalStyle`
 
 .kidsroom-wrapper {
   max-width: 500px;
-  margin: 50px auto;
+  margin-bottom: 50px;
   padding: 40px 25px;
   background-color: whitesmoke;
   font-family: Arial;
@@ -65,14 +72,13 @@ export const GlobalStyles = createGlobalStyle`
 
 .homemade-wrapper {
   max-width: 500px;
-  margin: 50px auto;
+  margin-bottom: 50px;
   padding: 40px 25px;
   
   line-height: 1.5rem;
   letter-spacing: 1px;
 
   background: #faf7f2;
-  background-image: url("https://s3.postimg.org/s1n3ji1ur/paper_fibers_2_X.png");
     box-sizing: border-box;
     font-family: "Lato", sans-serif;
     font-size: 16px;
@@ -83,14 +89,13 @@ export const GlobalStyles = createGlobalStyle`
 
 .favorites-wrapper {
   max-width: 500px;
-  margin: 50px auto;
+  margin-bottom: 50px;
   padding: 40px 25px;
 
   line-height: 1.5rem;
   letter-spacing: 1px;
   letter-spacing: 1px;
   background: #faf7f2;
-  background-image: url("https://s3.postimg.org/s1n3ji1ur/paper_fibers_2_X.png");
     box-sizing: border-box;
     font-family: "Lato", sans-serif;
     font-size: 16px;
@@ -99,12 +104,11 @@ export const GlobalStyles = createGlobalStyle`
 
 .profil-wrapper {
   max-width: 500px;
-  margin: 50px auto;
+  margin-bottom: 50px;
   padding: 40px 25px;
 
   letter-spacing: 1px;
   background: #faf7f2;
-  background-image: url("https://s3.postimg.org/s1n3ji1ur/paper_fibers_2_X.png");
     box-sizing: border-box;
     font-family: "Lato", sans-serif;
     font-size: 16px;

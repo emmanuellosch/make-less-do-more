@@ -29,10 +29,12 @@ const recipes = [
     author: "Thomas",
     subtle:
       "For you over caffeinated coffee addicts out there, time to toss the coffee pods! Turn that vice into a virtue by making zero waste coffee.",
-    supplies:
+    supplies: [
       "Start by buying your coffee in bulk.  You can typically either grind right there at the store (we tried 3 stores before we found one with a grinder so it may take a bit of perseverance) or do it yourself at home for an ultra-fresh brew – guaranteed maximum deliciousness!",
-    steps:
+    ],
+    steps: [
       "To make the coffee itself, you can either use a glass / stainless steel french press, or an Italian Bialetti stovetop espresso maker. We personally LOVE the Bialetti, we’ve been using for years and love the routine of making it on the stove, is a special little morning routine! Once you’re finished, just toss the grounds into your compost bin or even directly in soil as a pH neutral fertilizer and natural pesticide. Worms love coffee grounds too!",
+    ],
     image: "/images/coffee.jpg",
   },
   {
@@ -41,10 +43,12 @@ const recipes = [
     author: "Rachel",
     subtle:
       "Just because you’ve gone zero waste and avoid plastic bottles with chemical based household cleaners, doesn’t mean you can’t keep your kitchen sparkly clean. ",
-    supplies:
+    supplies: [
       "To wash dishes, ditch the plastic bottle and switch to zero waste dish soap. Alternatively, you can opt for zero waste bulk soap, which you can now find at many grocery stores.",
-    steps:
+    ],
+    steps: [
       "Lastly, to keep countertops clean and bacteria free with a simple, all-purpose zero waste cleaner you can make out of just vinegar diluted with water. ",
+    ],
     image: "/images/cleaning.jpg",
   },
 ];
