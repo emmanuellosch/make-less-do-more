@@ -14,14 +14,18 @@ export default function RecipeCard({
   const onClick = () => setShowDetails(!showDetails);
   const Details = () => (
     <Div>
-      <h2>Supplies Needed</h2>
+      <h2>Supplies:</h2>
       <ul>
-        <p>{recipe.supplies}</p>
-      </ul>
-      <h2>How to make it!</h2>
-      <p>Step One:</p>
+        {recipe.supplies.map((supply) => (
+          <li>{supply}</li>
+        ))}
+      </ul>{" "}
+      <br />
+      <h2>Doing:</h2>
       <ul>
-        <p>{recipe.steps}</p>
+        {recipe.steps.map((step) => (
+          <li>{step}</li>
+        ))}
       </ul>
     </Div>
   );
@@ -42,7 +46,7 @@ export default function RecipeCard({
               size="3x"
               className="font-upload"
               onClick={toggleRecipeToFavorites}
-              style={isFavorite ? { color: "rebeccapurple" } : ""}
+              style={isFavorite ? { color: "#922c88" } : ""}
             />
           </div>{" "}
           {showDetails ? <Details /> : null}
@@ -68,6 +72,22 @@ const Div = styled.div`
   position: relative;
   box-shadow: 0 0 5px rgba(75, 75, 75, 0.07);
   z-index: 1;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+    column-count: 1;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  h2 {
+    color: #555;
+    margin-bottom: 30px;
+  }
 `;
 
 const Div2 = styled.div`
@@ -196,7 +216,7 @@ const Div2 = styled.div`
   }
 
   .font-upload:hover {
-    color: rebeccapurple;
+    color: #922c88;
   }
 `;
 
