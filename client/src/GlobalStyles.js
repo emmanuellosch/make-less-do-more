@@ -114,24 +114,7 @@ h1 {
     font-size: 16px;
     font-weight: 400;
 }
-  
-.navbar {
-  border-bottom: solid 1px #ebebeb;
-  background: rgba(255, 255, 255, 0.8);
-}
-.bottom-tab-nav {
-  border-top: solid 1px #ebebeb;
-}
-.nav-link,
-.bottom-nav-link {
-  color: #55575b;
-}
-.bottom-nav-link.active {
-  color: #922c88;
-}
-.bottom-tab-label {
-  font-size: 12px;
-}
+ 
 
 
 

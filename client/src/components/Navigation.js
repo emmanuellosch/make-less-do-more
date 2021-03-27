@@ -1,67 +1,59 @@
 import React from "react";
-import { Nav, NavItem } from "reactstrap";
+import styled from "styled-components";
+
 import { NavLink } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faRetweet,
-  faBookmark,
-  faHandHoldingHeart,
-  faUserCircle,
-} from "@fortawesome/free-solid-svg-icons";
 
-const tabs = [
-  {
-    route: "/Reusable",
-    icon: faRetweet,
-    label: "Reusable",
-  },
-  {
-    route: "/Favorites",
-    icon: faBookmark,
-    label: "Favorites",
-  },
-  {
-    route: "/Homemade",
-    icon: faHandHoldingHeart,
-    label: "Homemade",
-  },
-  {
-    route: "/Profil",
-    icon: faUserCircle,
-    label: "Profil",
-  },
-];
-
-const Navigation = (props) => {
-  const position = props.position === "static" ? "" : "fixed-bottom";
+function Navigation() {
   return (
-    <div>
-      {/* Bottom Tab Navigator*/}
-      <nav
-        className={`navbar ${position} navbar-light d-block bottom-tab-nav`}
-        role="navigation"
-      >
-        <Nav className="w-100">
-          <div className=" d-flex flex-row justify-content-around w-100">
-            {tabs.map((tab, index) => (
-              <NavItem key={`tab-${index}`}>
-                <NavLink
-                  to={tab.route}
-                  className="nav-link bottom-nav-link"
-                  activeClassName="active"
-                >
-                  <div className="row d-flex flex-column justify-content-center align-items-center">
-                    <FontAwesomeIcon size="lg" icon={tab.icon} />
-                    <div className="botton-tab-label">{tab.label}</div>
-                  </div>
-                </NavLink>
-              </NavItem>
-            ))}
-          </div>
-        </Nav>
-      </nav>
-    </div>
+    <Nav className="navigation">
+      <NavLink activeClassName="active" className="link" exact to="/Reusable">
+        Reusable
+      </NavLink>
+      <NavLink activeClassName="active" className="link" exact to="/Favorites">
+        Favorites
+      </NavLink>
+      <NavLink activeClassName="active" className="link" exact to="/Homemade">
+        Homemade
+      </NavLink>
+      <NavLink activeClassName="active" className="link" exact to="/Profil">
+        Profil
+      </NavLink>
+    </Nav>
   );
-};
+}
 
 export default Navigation;
+
+const Nav = styled.div`
+  border-bottom: solid 1px #ebebeb;
+  padding: 0 20px;
+  min-height: 9vh;
+  background: #1c2022;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  .link {
+    color: #ffffff;
+    text-decoration: none;
+
+    float: left;
+    display: block;
+  }
+
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 17px;
+
+  .active {
+    color: #922c88;
+    text-decoration: none;
+  }
+
+  .navigation:hover {
+    color: #922c88;
+  }
+`;

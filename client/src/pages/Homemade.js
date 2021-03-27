@@ -3,7 +3,7 @@ import { useState } from "react";
 import styled from "styled-components";
 
 import RecipeCard from "../components/RecipeCard";
-import Search from "../components/Search";
+import Search from "../components/search";
 import Announcer from "../components/Announcer";
 
 export default function Homemade({ addRecipeToFavorites, recipes }) {
