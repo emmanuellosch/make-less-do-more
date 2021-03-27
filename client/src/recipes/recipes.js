@@ -19,7 +19,11 @@ const recipes = [
     ],
 
     steps: [
-      "If you haven’t already, wash and dry your chosen fabric as needed. Cut the fabric into desired shapes and sizes of your choice. (See recommended sizes below.) For this particular demo, I was working with limited size options since I created these homemade beeswax wraps from an old small shirt. Plus, we already have quite a few larger wraps. If you’re feeling especially crafty, you could hem the cut edges of the fabric with a sewing machine. Another option is to cut the fabric with pinking shears to reduce fraying. The wax itself will also slow fraying. Your homemade beeswax wraps don’t need to be square! They can be rectangular or even cut into circles. ",
+      "Cut your pre-washed fabric to the size you want using pinking shears (to prevent fraying). A thin, fine-weave cotton is best, as it is easier to fold and wrap when infused with wax; muslin or sheet-thickness is ideal. The beeswax will turn your fabric slightly yellow, so choose a colour that won’t clash.",
+      "Put the pine resin (if in chunks, roll it with a rolling pin to turn it to powder) in a metal bowl and place over a pan of simmering water. When the resin starts to melt, add the beeswax, almond or coconut oil and jojoba. When the ingredients have melted, mix together gently, keeping the pan on a low heat.",
+      "Heat your oven to 140°C. Lay the fabric on a baking sheet covered with baking paper, making sure the paper is bigger than your fabric. If you’re making a large wrap, for storing bread for example, it’s okay to fold the fabric so it fits on your baking sheet. Place in the oven for two minutes to heat the fabric.",
+      "Take the tray out of the oven and, working quickly, use your brush to paint the fabric with the beeswax mix. Return to the oven for a minute, then remove and brush again to ensure the wax is spread evenly all over the cotton. Use pegs or just drape the fabric on a rack to dry; it will take only minutes.",
+      "Your wrap is then ready to use. Use the warmth of your hands to shape it around a bowl, jar or sandwich. Don’t use your wrap to cover raw fish, eggs or meat. Clean it with a cloth using cold-to-warm water – hot will melt the wax – and a little detergent; rinse and hang to dry. If it needs a refresh after a few months, place on a lined tray in a 140°C oven for three minutes. ",
     ],
     image: "/images/SnackWraps_beeswax.jpg",
   },
