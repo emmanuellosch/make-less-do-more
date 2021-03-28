@@ -1,21 +1,32 @@
 import React from "react";
-import styled from "styled-components";
-
 import { NavLink } from "react-router-dom";
+import styled from "styled-components";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faRetweet,
+  faBookmark,
+  faHandHoldingHeart,
+  faUserCircle,
+} from "@fortawesome/free-solid-svg-icons";
 
 function Navigation() {
   return (
     <Nav className="navigation">
       <NavLink activeClassName="active" className="link" exact to="/Reusable">
+        {" "}
+        <FontAwesomeIcon icon={faRetweet} />
         Reusable
       </NavLink>
       <NavLink activeClassName="active" className="link" exact to="/Favorites">
+        <FontAwesomeIcon icon={faBookmark} />
         Favorites
       </NavLink>
       <NavLink activeClassName="active" className="link" exact to="/Homemade">
+        <FontAwesomeIcon icon={faHandHoldingHeart} />
         Homemade
       </NavLink>
       <NavLink activeClassName="active" className="link" exact to="/Profil">
+        <FontAwesomeIcon icon={faUserCircle} />
         Profil
       </NavLink>
     </Nav>
@@ -25,35 +36,37 @@ function Navigation() {
 export default Navigation;
 
 const Nav = styled.div`
-  border-bottom: solid 1px #ebebeb;
-  padding: 0 20px;
-  min-height: 9vh;
-  background: #1c2022;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: fixed;
   bottom: 0;
   width: 100%;
-
+  height: 55px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  display: flex;
+  overflow: hidden;
+  z-index: 3;
   .link {
-    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    min-width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #444444;
     text-decoration: none;
-
-    float: left;
-    display: block;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.1s ease-in-out;
   }
-
-  text-align: center;
-  padding: 14px 16px;
-  font-size: 17px;
 
   .active {
     color: #922c88;
-    text-decoration: none;
   }
 
-  .navigation:hover {
-    color: #922c88;
+  .navigation link:hover {
+    background-color: #eeeeee;
   }
 `;

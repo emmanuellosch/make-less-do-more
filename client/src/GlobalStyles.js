@@ -91,7 +91,6 @@ h1 {
   max-width: 500px;
   margin-bottom: 50px;
   padding: 40px 25px;
-
   line-height: 1.5rem;
   letter-spacing: 1px;
   letter-spacing: 1px;
