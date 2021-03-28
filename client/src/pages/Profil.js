@@ -6,12 +6,19 @@ import { profile } from "../profile/profile";
 export default function Profil() {
   return (
     <div className="profil-wrapper">
+      <p className="date">
+        <span className="date_span">Zero</span>
+      </p>
       <h1>Profile</h1>
+      <p className="waste waste_span">
+        <span className="date_span">Waste</span>
+      </p>
 
       <Div>
         <div className="card">
           <form>
             <h2>Profile Card</h2>
+
             <label className="custom-file-upload">
               <div className="img-wrap">
                 <img src={profile.image} width="200" />

@@ -41,7 +41,6 @@ const Nav = styled.div`
   width: 100%;
   height: 55px;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-  background-color: #ffffff;
   display: flex;
   overflow: hidden;
   z-index: 3;
@@ -66,7 +65,7 @@ const Nav = styled.div`
     color: #922c88;
   }
 
-  .navigation link:hover {
+  link:hover {
     background-color: #eeeeee;
   }
 `;
