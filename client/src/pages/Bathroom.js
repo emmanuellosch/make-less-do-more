@@ -58,7 +58,7 @@ export default function Bathroom() {
           that accepts empty bottles in return.
         </li>
       </ol>
-      <NavLink className="link" to="/homemade">
+      <NavLink className="link" to="/homemade/4">
         <Button>Make your own soap in Homemade</Button>{" "}
       </NavLink>
       <br />
