@@ -8,7 +8,7 @@ export default function Favorites({ favoriteRecipes, deleteFavoriteRecipes }) {
         <span className="date_span">Zero</span>
       </p>
       <h1>Favorites</h1>
-      <p className="waste waste_span">
+      <p className="date">
         <span className="date_span">Waste</span>
       </p>
       {favoriteRecipes.map((favoriteRecipe) => (

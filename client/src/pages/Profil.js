@@ -10,7 +10,7 @@ export default function Profil() {
         <span className="date_span">Zero</span>
       </p>
       <h1>Profile</h1>
-      <p className="waste waste_span">
+      <p className="date">
         <span className="date_span">Waste</span>
       </p>
 

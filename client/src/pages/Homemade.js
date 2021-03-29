@@ -45,7 +45,7 @@ export default function Homemade({ addRecipeToFavorites, recipes }) {
         <span className="date_span">Zero</span>
       </p>
       <h1>Homemade</h1>
-      <p className="waste waste_span">
+      <p className="date">
         <span className="date_span">Waste</span>
       </p>
 
