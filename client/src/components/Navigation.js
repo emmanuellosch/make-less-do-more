@@ -9,15 +9,20 @@ import {
   faUserCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
-function Navigation() {
+function Navigation({ isStatic }) {
   return (
-    <Nav className="navigation">
+    <Nav className="navigation" isStatic={isStatic}>
       <NavLink activeClassName="active" className="link" exact to="/Reusable">
-        {" "}
         <FontAwesomeIcon icon={faRetweet} />
         Reusable
       </NavLink>
-      <NavLink activeClassName="active" className="link" exact to="/Favorites">
+      <NavLink
+        activeClassName="active"
+        className="link"
+        exact
+        to="/Favorites"
+        data-cy="nav-link-Favorites"
+      >
         <FontAwesomeIcon icon={faBookmark} />
         Favorites
       </NavLink>
@@ -36,7 +41,7 @@ function Navigation() {
 export default Navigation;
 
 const Nav = styled.div`
-  position: fixed;
+  position: ${(props) => (props.isStatic ? "static" : "fixed")};
   bottom: 0;
   border-bottom: solid 1px #ebebeb;
   background: rgba(255, 255, 255, 0.8);
