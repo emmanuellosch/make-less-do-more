@@ -1,6 +1,6 @@
 import React from "react";
-import { Nav, NavItem } from "reactstrap";
 import { NavLink } from "react-router-dom";
+import styled from "styled-components";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faRetweet,
@@ -9,59 +9,65 @@ import {
   faUserCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
-const tabs = [
-  {
-    route: "/Reusable",
-    icon: faRetweet,
-    label: "Reusable",
-  },
-  {
-    route: "/Favorites",
-    icon: faBookmark,
-    label: "Favorites",
-  },
-  {
-    route: "/Homemade",
-    icon: faHandHoldingHeart,
-    label: "Homemade",
-  },
-  {
-    route: "/Profil",
-    icon: faUserCircle,
-    label: "Profil",
-  },
-];
-
-const Navigation = (props) => {
-  const position = props.position === "static" ? "" : "fixed-bottom";
+function Navigation() {
   return (
-    <div>
-      {/* Bottom Tab Navigator*/}
-      <nav
-        className={`navbar ${position} navbar-light d-block bottom-tab-nav`}
-        role="navigation"
-      >
-        <Nav className="w-100">
-          <div className=" d-flex flex-row justify-content-around w-100">
-            {tabs.map((tab, index) => (
-              <NavItem key={`tab-${index}`}>
-                <NavLink
-                  to={tab.route}
-                  className="nav-link bottom-nav-link"
-                  activeClassName="active"
-                >
-                  <div className="row d-flex flex-column justify-content-center align-items-center">
-                    <FontAwesomeIcon size="lg" icon={tab.icon} />
-                    <div className="botton-tab-label">{tab.label}</div>
-                  </div>
-                </NavLink>
-              </NavItem>
-            ))}
-          </div>
-        </Nav>
-      </nav>
-    </div>
+    <Nav className="navigation">
+      <NavLink activeClassName="active" className="link" exact to="/Reusable">
+        {" "}
+        <FontAwesomeIcon icon={faRetweet} />
+        Reusable
+      </NavLink>
+      <NavLink activeClassName="active" className="link" exact to="/Favorites">
+        <FontAwesomeIcon icon={faBookmark} />
+        Favorites
+      </NavLink>
+      <NavLink activeClassName="active" className="link" exact to="/Homemade">
+        <FontAwesomeIcon icon={faHandHoldingHeart} />
+        Homemade
+      </NavLink>
+      <NavLink activeClassName="active" className="link" exact to="/Profil">
+        <FontAwesomeIcon icon={faUserCircle} />
+        Profil
+      </NavLink>
+    </Nav>
   );
-};
+}
 
 export default Navigation;
+
+const Nav = styled.div`
+  position: fixed;
+  bottom: 0;
+  border-bottom: solid 1px #ebebeb;
+  background: rgba(255, 255, 255, 0.8);
+  width: 100%;
+  height: 55px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  display: flex;
+  overflow: hidden;
+  z-index: 3;
+  .link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    min-width: 50px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: sans-serif;
+    font-size: 13px;
+    color: #444444;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 0.1s ease-in-out;
+  }
+
+  .active {
+    color: #922c88;
+  }
+
+  link:hover {
+    background-color: #eeeeee;
+  }
+`;

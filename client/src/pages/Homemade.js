@@ -3,7 +3,7 @@ import { useState } from "react";
 import styled from "styled-components";
 
 import RecipeCard from "../components/RecipeCard";
-import Search from "../components/Search";
+import Search from "../components/search";
 import Announcer from "../components/Announcer";
 
 export default function Homemade({ addRecipeToFavorites, recipes }) {
@@ -41,7 +41,13 @@ export default function Homemade({ addRecipeToFavorites, recipes }) {
   const filteredRecipes = filterRecipes(recipes, searchQuery);
   return (
     <div className="homemade-wrapper">
+      <p className="date">
+        <span className="date_span">Zero</span>
+      </p>
       <h1>Homemade</h1>
+      <p className="date">
+        <span className="date_span">Waste</span>
+      </p>
 
       <Announcer message={`${filteredRecipes.length} recipes`} />
       <Search searchQuery={searchQuery} setSearchQuery={setSearchQuery} />

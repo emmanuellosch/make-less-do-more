@@ -6,19 +6,25 @@ import { profile } from "../profile/profile";
 export default function Profil() {
   return (
     <div className="profil-wrapper">
+      <p className="date">
+        <span className="date_span">Zero</span>
+      </p>
       <h1>Profile</h1>
+      <p className="date">
+        <span className="date_span">Waste</span>
+      </p>
 
       <Div>
         <div className="card">
           <form>
             <h2>Profile Card</h2>
+            <div className="name">{profile.name}</div>
             <label className="custom-file-upload">
               <div className="img-wrap">
                 <img src={profile.image} width="200" />
               </div>
             </label>
-            <div className="name">{profile.name}</div>
-            <div className="status">{profile.status}</div>
+            <div className="status">"{profile.status}"</div>
             <Button type="submit" className="edit">
               Edit Profile{" "}
             </Button>
@@ -55,6 +61,15 @@ const Div = styled.div`
     height: 200px;
     overflow: hidden;
     border-radius: 50%;
+    margin: 25% auto;
+  }
+
+  .name {
+    margin-top: -20px;
+  }
+
+  .status {
+    margin-top: -30px;
   }
 `;
 
@@ -69,4 +84,5 @@ const Button = styled.button`
   box-shadow: 0 0 5px rgba(75, 75, 75, 0.07);
   text-transform: uppercase;
   width: 100%;
+  margin-top: 24px;
 `;

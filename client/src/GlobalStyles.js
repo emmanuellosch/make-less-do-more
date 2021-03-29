@@ -6,12 +6,67 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 h1 {
-  color: #922c88;
-  text-align: center;
-  margin-bottom: 2rem;
-  border-bottom-style: solid;
+  color: #111; 
+  font-family: 'Open Sans Condensed', sans-serif; 
+  font-size: 50px; 
+  font-weight: 700; 
+  line-height: 64px; 
+  margin: 0 0 0; 
+  padding: 20px 30px; 
+  text-align: center; 
+  text-transform: uppercase;
 }
 
+.date { 
+  color: #111; 
+  display: block; 
+  font-family: 'Open Sans', sans-serif; 
+  font-size: 16px; 
+  position: relative; 
+  text-align: center; 
+  z-index: 1; }
+
+.date:before { 
+  border-top: 1px solid #111; 
+  content: ""; 
+  position: absolute; 
+  top: 12px; 
+  left: 0; 
+  width: 100%; 
+  z-index: -1; }
+
+.waste { 
+  color: #111; 
+  display: block; 
+  font-family: 'Open Sans', sans-serif; 
+  font-size: 16px; 
+  padding-bottom: 38px; 
+  position: relative; 
+  text-align: center; 
+  z-index: 1; }
+
+.waste:before { 
+  border-top: 1px solid #111; 
+  content: ""; 
+  position: absolute; 
+  top: 12px; 
+  left: 0; 
+  width: 100%; 
+  z-index: -1; }
+
+.date_span, 
+.waste_span { 
+  background: #fdfdfd; 
+  padding: 0 10px; 
+  text-transform: uppercase; 
+}
+
+.line { 
+  border-top: 1px solid #111; 
+  display: block; 
+  margin-top: 60px; 
+  padding-top: 50px; 
+  position: relative; }
 
   .kitchen-wrapper {
   max-width: 500px;
@@ -91,7 +146,6 @@ h1 {
   max-width: 500px;
   margin-bottom: 50px;
   padding: 40px 25px;
-
   line-height: 1.5rem;
   letter-spacing: 1px;
   letter-spacing: 1px;
@@ -114,24 +168,7 @@ h1 {
     font-size: 16px;
     font-weight: 400;
 }
-  
-.navbar {
-  border-bottom: solid 1px #ebebeb;
-  background: rgba(255, 255, 255, 0.8);
-}
-.bottom-tab-nav {
-  border-top: solid 1px #ebebeb;
-}
-.nav-link,
-.bottom-nav-link {
-  color: #55575b;
-}
-.bottom-nav-link.active {
-  color: #922c88;
-}
-.bottom-tab-label {
-  font-size: 12px;
-}
+ 
 
 
 
