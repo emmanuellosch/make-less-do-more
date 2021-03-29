@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-
 import { profile } from "../profile/profile";
+import logo1 from "../images/logo1.png";
 
 export default function Profil() {
   return (
@@ -25,8 +25,9 @@ export default function Profil() {
               </div>
             </label>
             <div className="status">"{profile.status}"</div>
+            <img src={logo1} alt="logo" className="logo1" />
             <Button type="submit" className="edit">
-              Edit Profile{" "}
+              Edit Profile
             </Button>
           </form>
         </div>
@@ -53,6 +54,14 @@ const Div = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+
+  .logo1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 28px;
+    width: 50%;
   }
 
   .img-wrap {
