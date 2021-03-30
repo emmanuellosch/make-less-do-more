@@ -12,7 +12,13 @@ import {
 function Navigation({ isStatic }) {
   return (
     <Nav className="navigation" isStatic={isStatic}>
-      <NavLink activeClassName="active" className="link" exact to="/Reusable">
+      <NavLink
+        activeClassName="active"
+        className="link"
+        exact
+        to="/Reusable"
+        data-cy="nav-link-Reusable"
+      >
         <FontAwesomeIcon icon={faRetweet} />
         Reusable
       </NavLink>
@@ -26,11 +32,23 @@ function Navigation({ isStatic }) {
         <FontAwesomeIcon icon={faBookmark} />
         Favorites
       </NavLink>
-      <NavLink activeClassName="active" className="link" exact to="/Homemade">
+      <NavLink
+        activeClassName="active"
+        className="link"
+        exact
+        to="/Homemade"
+        data-cy="nav-link-Homemade"
+      >
         <FontAwesomeIcon icon={faHandHoldingHeart} />
         Homemade
       </NavLink>
-      <NavLink activeClassName="active" className="link" exact to="/Profil">
+      <NavLink
+        activeClassName="active"
+        className="link"
+        exact
+        to="/Profil"
+        data-cy="nav-link-Profil"
+      >
         <FontAwesomeIcon icon={faUserCircle} />
         Profil
       </NavLink>
