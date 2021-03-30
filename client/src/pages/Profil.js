@@ -21,7 +21,7 @@ export default function Profil() {
             <div className="name">{profile.name}</div>
             <label className="custom-file-upload">
               <div className="img-wrap">
-                <img src={profile.image} width="200" />
+                <img src={profile.image} alt="" width="200" />
               </div>
             </label>
             <div className="status">"{profile.status}"</div>
