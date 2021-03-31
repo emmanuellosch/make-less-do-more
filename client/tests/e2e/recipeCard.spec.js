@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />;
 
-describe("<RecipeCard /> component", () => {
+describe("<recipes /> component", () => {
   beforeEach(() => {
     cy.visit("/Homemade");
   });
@@ -8,6 +8,10 @@ describe("<RecipeCard /> component", () => {
   it("should display", () => {
     cy.visit("/Homemade");
 
-    cy.get("[recipes]").should("be.visible");
+    it("Checks texts of items", () => {
+      cy.get(".recipes").eq(0).should("contain.text", "zero waste");
+
+      cy.get(".recipes").eq(1).should("contain.text", "doing");
+    });
   });
 });
