@@ -9,23 +9,46 @@ import {
   faUserCircle,
 } from "@fortawesome/free-solid-svg-icons";
 
-function Navigation() {
+function Navigation({ isStatic }) {
   return (
-    <Nav className="navigation">
-      <NavLink activeClassName="active" className="link" exact to="/Reusable">
-        {" "}
+    <Nav className="navigation" isStatic={isStatic}>
+      <NavLink
+        activeClassName="active"
+        className="link"
+        exact
+        to="/Reusable"
+        data-cy="nav-link-Reusable"
+      >
         <FontAwesomeIcon icon={faRetweet} />
         Reusable
       </NavLink>
-      <NavLink activeClassName="active" className="link" exact to="/Favorites">
+      <NavLink
+        activeClassName="active"
+        className="link"
+        exact
+        to="/Favorites"
+        data-cy="nav-link-Favorites"
+      >
         <FontAwesomeIcon icon={faBookmark} />
         Favorites
       </NavLink>
-      <NavLink activeClassName="active" className="link" exact to="/Homemade">
+      <NavLink
+        activeClassName="active"
+        className="link"
+        exact
+        to="/Homemade"
+        data-cy="nav-link-Homemade"
+      >
         <FontAwesomeIcon icon={faHandHoldingHeart} />
         Homemade
       </NavLink>
-      <NavLink activeClassName="active" className="link" exact to="/Profil">
+      <NavLink
+        activeClassName="active"
+        className="link"
+        exact
+        to="/Profil"
+        data-cy="nav-link-Profil"
+      >
         <FontAwesomeIcon icon={faUserCircle} />
         Profil
       </NavLink>
@@ -36,10 +59,9 @@ function Navigation() {
 export default Navigation;
 
 const Nav = styled.div`
-  position: fixed;
+  position: ${(props) => (props.isStatic ? "static" : "fixed")};
   bottom: 0;
   border-bottom: solid 1px #ebebeb;
-  background: rgba(255, 255, 255, 0.8);
   width: 100%;
   height: 55px;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);

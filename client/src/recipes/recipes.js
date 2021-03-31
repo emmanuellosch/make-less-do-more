@@ -55,6 +55,27 @@ const recipes = [
     ],
     image: "/images/cleaning.jpg",
   },
+  {
+    id: 4,
+    title: "Zero Waste - Soap",
+    author: "Tim",
+    subtle:
+      "You might be surprised by how easy and fast making your own cleaning products can be! Hubby and I are lazy people, so we are all about simple solutions, or else there is no way we would incorporate that into our daily lives. This dish soap can be made in only one minute if you use liquid castile soap. If you use bar soap, you will have to add 5-10 minutes of grating. Or you can always chop it into chunks and have your food processor take care of the rest.",
+    supplies: [
+      "EITHER 25-30g palm oil free castile bar soap (we use traditional olive oil soap) OR 170ml palm oil free liquid castile soap (all of Dr. Bronner’s castile soaps are unfortunately palm oil based) OR you can use up whatever bar soap you still have at home, but in that case please note that the dish soap might not be free from harmful substances anymore and please make sure to read the troubleshooting below!",
+      "2 tsp baking soda",
+      "600ml water",
+      "3 drops of your favorite essential oil (optional)",
+      "1 soap dispenser and maybe a jar for the surplus",
+    ],
+    steps: [
+      "Lastly, to Grate the soap. We usually grate a huge bar while watching some TV show and keep the soap flakes in a jar for next time or other recipes. If you have a food processor, well, lucky you! You can just chop the bar into chunks and let your food processor do the shredding.",
+      "Bring water to a boil. Turn off the stove, add the soap flakes. Stir with a spoon until the soap has dissolved. Let cool. Add baking soda when the mixture is still warm, but not so hot that you could not touch it. We like to let it cool down overnight.",
+      "Shake before you transfer in into a soap dispenser. Also shake from time to time.",
+      "Mix the castile soap with hot water (not so hot that you couldn’t touch it), add the baking soda and stir to combine.",
+    ],
+    image: "/images/soap.jpg",
+  },
 ];
 
 export default recipes;
