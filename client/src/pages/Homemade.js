@@ -1,10 +1,10 @@
-import { Switch, Route, useParams, useRouteMatch } from "react-router-dom";
-import { useState } from "react";
-import styled from "styled-components";
+import { Switch, Route, useParams, useRouteMatch } from 'react-router-dom';
+import { useState } from 'react';
+import styled from 'styled-components';
 
-import RecipeCard from "../components/RecipeCard";
-import Search from "../components/search";
-import Announcer from "../components/Announcer";
+import RecipeCard from '../components/RecipeCard';
+import Search from '../components/Search';
+import Announcer from '../components/Announcer';
 
 export default function Homemade({ addRecipeToFavorites, recipes }) {
   let { path } = useRouteMatch();
@@ -36,8 +36,8 @@ export default function Homemade({ addRecipeToFavorites, recipes }) {
   };
 
   const { search } = window.location;
-  const query = new URLSearchParams(search).get("s");
-  const [searchQuery, setSearchQuery] = useState(query || "");
+  const query = new URLSearchParams(search).get('s');
+  const [searchQuery, setSearchQuery] = useState(query || '');
   const filteredRecipes = filterRecipes(recipes, searchQuery);
   return (
     <div className="homemade-wrapper">
