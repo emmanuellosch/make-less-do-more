@@ -47,8 +47,12 @@ function App() {
           </Route>
 
           <Route path="/Profil" component={Profil} />
+          <Route path="/" component={Reusable} />
+
+          
         </Switch>
       </BrowserRouter>
+    
     </div>
   );
 }
